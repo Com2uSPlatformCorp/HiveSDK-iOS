@@ -38,8 +38,7 @@ Pod::Spec.new do |spec|
     :http => "https://github.com/seokjinyong/HiveSDK/releases/download/#{spec.version}/HIVE_SDK_iOS_v#{spec.version}_withCore.zip" 
   }
 
-  # 4.16.0.2 미만
-  $vendored_frameworks_path = "SDK/framework"
+  $vendored_frameworks_path = "HIVE_SDK_iOS_v#{spec.version}_withCore/SDK/framework"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HIVEBase.framework", 
                               "#{$vendored_frameworks_path}/HIVECore.framework",
                               "#{$vendored_frameworks_path}/HIVEIAPV4.framework",
@@ -47,16 +46,6 @@ Pod::Spec.new do |spec|
                               "#{$vendored_frameworks_path}/HIVEService.framework",
                               "#{$vendored_frameworks_path}/HIVEUI.framework",
                               "#{$vendored_frameworks_path}/ProviderAdapter.framework"
-
-  # 4.16.0.2 이상
-  # $vendored_frameworks_path = "HIVE_SDK_iOS_v#{$hive_sdk_version}_withCore"
-  # spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HIVECore.xcframework", 
-  #                             "#{$vendored_frameworks_path}/HIVEIAPV4.xcframework",
-  #                             "#{$vendored_frameworks_path}/HIVEProtocol.xcframework",
-  #                             "#{$vendored_frameworks_path}/HIVEService.xcramework",
-  #                             "#{$vendored_frameworks_path}/HIVEUI.xcframework",
-  #                             "#{$vendored_frameworks_path}/HIVEBase.xcframework",
-  #                             "#{$vendored_frameworks_path}/ProviderAdapter.xcframework"
 
   spec.dependency 'FBSDKCoreKit', '12.3.1'
   spec.dependency 'FBSDKLoginKit', '12.3.1'
