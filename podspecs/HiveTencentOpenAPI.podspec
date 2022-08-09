@@ -39,7 +39,7 @@ Pod::Spec.new do |spec|
     :http => "https://github.com/seokjinyong/HiveSDK/releases/download/#{spec.version}/HIVE_SDK_iOS_v#{spec.version}_withCore.zip",
   }
 
-  $vendored_frameworks_path = "HIVE_SDK_iOS_v#{spec.version}_withCore/SDK/framework"
+  $vendored_frameworks_path = "SDK/framework"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/TencentOpenAPI.framework"
 
   spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
