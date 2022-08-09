@@ -40,7 +40,7 @@ Pod::Spec.new do |spec|
   }
 
   # 4.16.0.2 미만
-  $vendored_frameworks_path = "HIVE_SDK_iOS_v#{spec.version}_withCore/SDK/framework"
+  $vendored_frameworks_path = "SDK/framework"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderVK.framework"
 
   spec.dependency 'HiveSDK', "#{spec.version}"
