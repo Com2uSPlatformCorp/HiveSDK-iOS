@@ -42,6 +42,7 @@ Pod::Spec.new do |spec|
   $framework_path = "external/TencentOpenAPI.framework"
   spec.source_files = "#{$framework_path}/**/*.{h, m}"
   spec.public_header_files = "#{$framework_path}/**/*.{h}"
+  spec.vendored_frameworks = "#{$framework_path}"
   spec.module_map = "#{$framework_path}/Modules/module.modulemap"
 
   spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
