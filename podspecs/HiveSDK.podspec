@@ -220,7 +220,6 @@ LICENSE
     :http => "https://github.com/seokjinyong/HiveSDK/releases/download/#{spec.version}/HIVE_SDK_iOS_v#{spec.version}_withCore.zip" 
   }
 
-  # 4.16.0.2 미만
   $vendored_frameworks_path = "{HIVE_SDK_iOS_v#{spec.version}_withCore/SDK/framework, SDK/framework}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HIVEBase.xcframework", 
                               "#{$vendored_frameworks_path}/HIVECore.xcframework",
@@ -234,4 +233,6 @@ LICENSE
   spec.dependency 'FBSDKLoginKit', '13.2.0'
   spec.dependency 'FBSDKShareKit', '13.2.0'
   spec.dependency 'GoogleSignIn', '6.1.0'
+  spec.dependency 'SDWebImage', '5.12.5'
+
 end
