@@ -1,6 +1,0 @@
-framework module WXApi {
-    umbrella header "WXApiFramework.h"
-    
-    export *
-    module * { export * }
-}

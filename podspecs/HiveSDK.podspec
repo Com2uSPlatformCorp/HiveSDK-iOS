@@ -1,6 +1,9 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveSDK"
   spec.version      = "4.16.1"
+  $facebook_sdk_version = "13.2.0"
+  $google_signin_sdk_version = "6.1.0"
+  $sd_web_image_sdk_version = "5.12.5"
   spec.summary      = "Hive SDK required frameworks."
   spec.description  = "Hive SDK frameworks help you to develop your application easily."
   spec.homepage     = "https://developers.withhive.com/"
@@ -184,31 +187,6 @@ incurred by, or claims asserted against, such Contributor by reason
 of your accepting any such warranty or additional liability.
 
 END OF TERMS AND CONDITIONS
-
-APPENDIX: How to apply the Apache License to your work.
-
-To apply the Apache License to your work, attach the following
-boilerplate notice, with the fields enclosed by brackets "[]"
-replaced with your own identifying information. (Don't include
-the brackets!)  The text should be enclosed in the appropriate
-comment syntax for the file format. We also recommend that a
-file or class name and description of purpose be included on the
-same "printed page" as the copyright notice for easier
-identification within third-party archives.
-
-Copyright [yyyy] [name of copyright owner]
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
 LICENSE
   }
 
@@ -229,10 +207,9 @@ LICENSE
                               "#{$vendored_frameworks_path}/HIVEUI.xcframework",
                               "#{$vendored_frameworks_path}/ProviderAdapter.xcframework"
 
-  spec.dependency 'FBSDKCoreKit', '13.2.0'
-  spec.dependency 'FBSDKLoginKit', '13.2.0'
-  spec.dependency 'FBSDKShareKit', '13.2.0'
-  spec.dependency 'GoogleSignIn', '6.1.0'
-  spec.dependency 'SDWebImage', '5.12.5'
-
+  spec.dependency 'FBSDKCoreKit', "#{$facebook_sdk_version}"
+  spec.dependency 'FBSDKLoginKit', "#{$facebook_sdk_version}"
+  spec.dependency 'FBSDKShareKit', "#{$facebook_sdk_version}"
+  spec.dependency 'GoogleSignIn', "#{$google_signin_sdk_version}"
+  spec.dependency 'SDWebImage', "#{$sd_web_image_sdk_version}"
 end
