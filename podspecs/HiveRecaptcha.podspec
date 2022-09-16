@@ -186,7 +186,7 @@ END OF TERMS AND CONDITIONS
 LICENSE
   }
   spec.author       = { "seokjinyong" => "seokjinyong@com2us.com" }
-  spec.platform     = :ios, "10.0"
+  spec.platform     = :ios, "11.0"
   spec.swift_version = "5.0"
 
   spec.source       = { 
@@ -197,5 +197,4 @@ LICENSE
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HiveRecaptcha.xcframework"
   spec.dependency 'HiveSDK', "#{spec.version}"
   spec.dependency 'HiveGoogleRecaptcha', "#{spec.version}"
-
 end
