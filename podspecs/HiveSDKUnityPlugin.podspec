@@ -197,7 +197,7 @@ LICENSE
 
   spec.dependency 'HiveSDK', "#{spec.version}"
 
-  $vendored_frameworks_path = "{Hive_SDK_iOS_v#{spec.version}/SDK/framework, SDK/framework}"
+  $vendored_frameworks_path = "{Hive_SDK_iOS_v#{spec.version}/framework, framework}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HIVE_SDK_UnityPlugin.xcframework"
 
   spec.user_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }

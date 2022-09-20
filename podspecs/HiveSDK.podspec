@@ -198,7 +198,7 @@ LICENSE
     :http => "https://github.com/seokjinyong/HiveSDK/releases/download/#{spec.version}/Hive_SDK_iOS_v#{spec.version}.zip" 
   }
 
-  $vendored_frameworks_path = "{Hive_SDK_iOS_v#{spec.version}/SDK/framework, SDK/framework}"
+  $vendored_frameworks_path = "{Hive_SDK_iOS_v#{spec.version}/framework, framework}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HIVEBase.xcframework", 
                               "#{$vendored_frameworks_path}/HIVECore.xcframework",
                               "#{$vendored_frameworks_path}/HIVEIAPV4.xcframework",

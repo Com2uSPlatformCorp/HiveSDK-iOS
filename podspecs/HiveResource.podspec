@@ -193,6 +193,6 @@ LICENSE
     :http => "https://github.com/seokjinyong/HiveSDK/releases/download/#{spec.version}/Hive_SDK_iOS_v#{spec.version}.zip" 
   }
 
-  $vendored_resource_path = "{Hive_SDK_iOS_v#{spec.version}/SDK/resource, SDK/resource}"
+  $vendored_resource_path = "{Hive_SDK_iOS_v#{spec.version}/resource, resource}"
   spec.resource = "#{$vendored_resource_path}/HiveResource.bundle"
 end
