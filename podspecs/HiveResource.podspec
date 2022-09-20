@@ -190,9 +190,9 @@ LICENSE
   spec.swift_version = "5.0"
 
   spec.source       = { 
-    :http => "https://github.com/seokjinyong/HiveSDK/releases/download/#{spec.version}/HIVE_SDK_iOS_v#{spec.version}_withCore.zip" 
+    :http => "https://github.com/seokjinyong/HiveSDK/releases/download/#{spec.version}/Hive_SDK_iOS_v#{spec.version}.zip" 
   }
 
-  $vendored_resource_path = "{HIVE_SDK_iOS_v#{spec.version}_withCore/SDK/resource, SDK/resource}"
+  $vendored_resource_path = "{Hive_SDK_iOS_v#{spec.version}/SDK/resource, SDK/resource}"
   spec.resource = "#{$vendored_resource_path}/HiveResource.bundle"
 end

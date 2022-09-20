@@ -191,11 +191,11 @@ LICENSE
   spec.swift_version = "5.0"
 
   spec.source       = { 
-    :http => "https://github.com/seokjinyong/HiveSDK/releases/download/#{spec.version}/HIVE_SDK_iOS_v#{spec.version}_withCore.zip",
+    :http => "https://github.com/seokjinyong/HiveSDK/releases/download/#{spec.version}/Hive_SDK_iOS_v#{spec.version}.zip",
   }
 
   spec.dependency 'HiveSDK', "#{spec.version}"
 
-  $vendored_frameworks_path = "{HIVE_SDK_iOS_v#{spec.version}_withCore/SDK/framework, SDK/framework}"
+  $vendored_frameworks_path = "{Hive_SDK_iOS_v#{spec.version}/SDK/framework, SDK/framework}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HIVE_SDK_Plugin.xcframework"
 end
