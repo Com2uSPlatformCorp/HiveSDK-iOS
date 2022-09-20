@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveGoogleRecaptcha"
-  spec.version      = "4.16.1"
+  spec.version      = "0.0.1"
   $google_recaptcha_version = "16.0.0"
   $promises_swift_version = "2.1.1"
   $google_data_transport_version = "9.2.0"
@@ -194,7 +194,7 @@ LICENSE
   spec.platform     = :ios, "10.0"
   spec.swift_version = "4.0"
   spec.source       = { 
-    :http => "https://github.com/seokjinyong/HiveSDK/releases/download/#{spec.version}/RecaptchaEnterprise-#{$google_recaptcha_version}.tar.gz",
+    :http => "https://dl.google.com/dl/cpdc/a5fcc34560b0fa39/RecaptchaEnterprise-16.0.0.tar.gz",
   }
 
   $vendored_frameworks_path = "**Frameworks"
