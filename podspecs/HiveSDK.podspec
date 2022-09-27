@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveSDK"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   $facebook_sdk_version = "13.2.0"
   $google_signin_sdk_version = "6.1.0"
   $sd_web_image_sdk_version = "5.12.5"

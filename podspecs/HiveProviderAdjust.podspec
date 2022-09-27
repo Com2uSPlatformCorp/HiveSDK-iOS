@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveProviderAdjust"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   $adjust_sdk_version = "4.29.7"
   spec.summary      = "HiveProviderAdjust optional framework  "
   spec.description  = "HiveProviderAdjust to use Adjust with Hive SDK"
