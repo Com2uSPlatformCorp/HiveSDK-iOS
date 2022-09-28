@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveProviderFirebase"
-  spec.version      = "0.0.3"
+  spec.version      = "0.0.4"
   $firebase_sdk_version = "9.3.0"
   spec.summary      = "HiveProviderFirebase optional framework"
   spec.description  = "HiveProviderFirebase to use Firebase analytics Hive SDK."
@@ -197,7 +197,7 @@ LICENSE
   $vendored_frameworks_path = "{Hive_SDK_iOS_v#{spec.version}/framework, framework}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderFirebase.xcframework"
 
-  spec.dependency 'HiveSDK', "#{spec.version}"
+  spec.dependency 'HiveSDK'
   spec.dependency 'FirebaseCore', "#{$firebase_sdk_version}"
   spec.dependency 'FirebaseAnalytics', "#{$firebase_sdk_version}"
 end

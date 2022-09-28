@@ -196,5 +196,5 @@ LICENSE
   $vendored_frameworks_path = "{Hive_SDK_iOS_v#{spec.version}/framework, framework}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HiveExtensions.xcframework"
 
-  spec.dependency 'HiveSDK', "#{spec.version}"
+  spec.dependency 'HiveSDK'
 end

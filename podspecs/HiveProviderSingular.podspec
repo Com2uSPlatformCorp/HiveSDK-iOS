@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveProviderSingular"
-  spec.version      = "0.0.3"
+  spec.version      = "0.0.4"
   $singular_sdk_version = "11.0.4"
   spec.summary      = "HiveProviderSingular optional framework"
   spec.description  = "HiveProviderSingular to use Singular analytics Hive SDK."
@@ -197,6 +197,6 @@ LICENSE
   $vendored_frameworks_path = "{Hive_SDK_iOS_v#{spec.version}/framework, framework}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderSingular.xcframework"
 
-  spec.dependency 'HiveSDK', "#{spec.version}"
+  spec.dependency 'HiveSDK'
   spec.dependency 'Singular-SDK', "#{$singular_sdk_version}"
 end

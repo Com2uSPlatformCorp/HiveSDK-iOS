@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveProviderWechat"
-  spec.version      = "0.0.3"
+  spec.version      = "0.0.4"
   spec.summary      = "HiveProviderWechat optional framework"
   spec.description  = "HiveProviderWechat to use Wechat sign-in with Hive SDK."
   spec.homepage     = "https://developers.withhive.com/"
@@ -196,7 +196,7 @@ LICENSE
   $vendored_frameworks_path = "{Hive_SDK_iOS_v#{spec.version}/framework, framework}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderWechat.xcframework"
 
-  spec.dependency 'HiveSDK', "#{spec.version}"
+  spec.dependency 'HiveSDK'
   spec.dependency 'HiveWXApi', "#{spec.version}"
 
   spec.pod_target_xcconfig = { 'VALID_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }

@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveRecaptcha"
-  spec.version      = "0.0.3"
+  spec.version      = "0.0.4"
   spec.summary      = "HiveRecpatcha optional framework"
   spec.description  = "HiveRecaptcha to use Google reCAPTCHA-Enterprise service when processing GUEST type sign-in with HiveSDK"
   spec.homepage     = "https://developers.withhive.com/"
@@ -195,6 +195,6 @@ LICENSE
 
   $vendored_frameworks_path = "{Hive_SDK_iOS_v#{spec.version}/framework, framework}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HiveRecaptcha.xcframework"
-  spec.dependency 'HiveSDK', "#{spec.version}"
-  spec.dependency 'HiveGoogleRecaptcha', "#{spec.version}"
+  spec.dependency 'HiveSDK'
+  spec.dependency 'HiveGoogleRecaptcha'
 end
