@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveSDK"
-  spec.version      = "1.0.0-beta3"
+  spec.version      = "1.0.0-beta4"
   $facebook_sdk_version = "13.2.0"
   $google_signin_sdk_version = "6.1.0"
   $sd_web_image_sdk_version = "5.12.5"
@@ -13,12 +13,12 @@ Pod::Spec.new do |spec|
     :file => 'LICENSE'
   }
 
-  spec.author       = { "seokjinyong" => "seokjinyong@com2us.com" }
+  spec.author       = { "Com2usPlatrformCorp" => "pc@com2us.com" }
   spec.platform     = :ios, "11.0"
   spec.swift_version = "5.0"
 
   spec.source       = { 
-    :http => "https://github.com/seokjinyong/HiveSDK/releases/download/#{spec.version}/Hive_SDK_iOS_v#{spec.version}.zip" 
+    :http => "https://github.com/seokjinyong/HiveSDK/releases/download/#{spec.version}/Hive_SDK_iOS_Core_v#{spec.version}.zip" 
   }
 
   $vendored_frameworks_path = "{Hive_SDK_iOS_v#{spec.version}/framework, framework}"
