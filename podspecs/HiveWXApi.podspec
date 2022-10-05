@@ -18,7 +18,7 @@ Pod::Spec.new do |spec|
     :http => "https://github.com/seokjinyong/HiveSDK/releases/download/#{spec.version}/Hive_SDK_iOS_External_v#{spec.version}.zip",
   }
 
-  $vendored_frameworks_path = "{Hive_SDK_iOS_v#{spec.version}/framework, framework}"
+  $vendored_frameworks_path = "Hive_SDK_iOS_External_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/WXApi.xcframework"
 
   spec.pod_target_xcconfig = { 'VALID_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }

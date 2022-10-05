@@ -16,6 +16,6 @@ Pod::Spec.new do |spec|
     :http => "https://github.com/seokjinyong/HiveSDK/releases/download/#{spec.version}/Hive_SDK_iOS_Core_v#{spec.version}.zip" 
   }
 
-  $vendored_resource_path = "{Hive_SDK_iOS_v#{spec.version}/resource, resource}"
+  $vendored_resource_path = "Hive_SDK_iOS_Core_v#{spec.version}"
   spec.resource = "#{$vendored_resource_path}/HiveResource.bundle"
 end

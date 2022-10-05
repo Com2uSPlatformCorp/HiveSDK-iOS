@@ -19,6 +19,6 @@ Pod::Spec.new do |spec|
 
   spec.dependency 'HiveSDK'
 
-  $vendored_frameworks_path = "{Hive_SDK_iOS_v#{spec.version}/framework, framework}"
+  $vendored_frameworks_path = "Hive_SDK_iOS_Plugin_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HIVE_SDK_Plugin.xcframework"
 end
