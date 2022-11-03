@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveProviderWeverse"
-  spec.version      = "4.16.2-beta1"
+  spec.version      = "4.16.2-beta2"
   spec.summary      = "HiveProviderWeverse optional framework  "
   spec.description  = "HiveProviderWeverse to use Weverse sign-in with Hive SDK"
   spec.homepage     = "https://developers.withhive.com/"
@@ -19,6 +19,4 @@ Pod::Spec.new do |spec|
 
   $vendored_frameworks_path = "Hive_SDK_iOS_Provider_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderWeverse.xcframework"
-
-  spec.dependency 'HiveSDK'
 end

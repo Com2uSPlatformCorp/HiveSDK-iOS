@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveAppTrackingTransparency"
-  spec.version      = "4.16.2-beta1"
+  spec.version      = "4.16.2-beta2"
   spec.summary      = "HiveAppTrackingTransparency optional framework."
   spec.description  = "HiveAppTrackingTransparency to request user's advertising id. Upper than iOS 14.0 required."
   spec.homepage     = "https://developers.withhive.com/"
@@ -21,5 +21,4 @@ Pod::Spec.new do |spec|
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HiveAppTrackingTransparency.xcframework"
 
   spec.frameworks = 'AppTrackingTransparency'
-  spec.dependency 'HiveSDK'
 end

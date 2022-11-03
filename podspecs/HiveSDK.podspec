@@ -1,8 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveSDK"
-  spec.version      = "4.16.2-beta1"
-  $facebook_sdk_version = "13.2.0"
-  $google_signin_sdk_version = "6.1.0"
+  spec.version      = "4.16.2-beta2"
   $sd_web_image_sdk_version = "5.12.5"
   spec.summary      = "Hive SDK required frameworks."
   spec.description  = "Hive SDK frameworks help you to develop your application easily."
@@ -29,10 +27,6 @@ Pod::Spec.new do |spec|
                               "#{$vendored_frameworks_path}/HIVEService.xcframework",
                               "#{$vendored_frameworks_path}/HIVEUI.xcframework",
                               "#{$vendored_frameworks_path}/ProviderAdapter.xcframework"
-
-  spec.dependency 'FBSDKCoreKit', "#{$facebook_sdk_version}"
-  spec.dependency 'FBSDKLoginKit', "#{$facebook_sdk_version}"
-  spec.dependency 'FBSDKShareKit', "#{$facebook_sdk_version}"
-  spec.dependency 'GoogleSignIn', "#{$google_signin_sdk_version}"
+                              
   spec.dependency 'SDWebImage', "#{$sd_web_image_sdk_version}"
 end

@@ -1,9 +1,9 @@
 Pod::Spec.new do |spec|
-  spec.name         = "HiveProviderAdjust"
+  spec.name         = "HiveProviderGoogle"
   spec.version      = "4.16.2-beta2"
-  $adjust_sdk_version = "4.29.7"
-  spec.summary      = "HiveProviderAdjust optional framework  "
-  spec.description  = "HiveProviderAdjust to use Adjust with Hive SDK"
+  $google_signin_sdk_version = "6.1.0"
+  spec.summary      = "HiveProviderGoogle optional framework"
+  spec.description  = "HiveProviderGoogle to use Google sign-in with Hive SDK."
   spec.homepage     = "https://developers.withhive.com/"
   spec.license      = {
     :type => 'Apache License 2.0', 
@@ -18,7 +18,7 @@ Pod::Spec.new do |spec|
   }
 
   $vendored_frameworks_path = "Hive_SDK_iOS_Provider_v#{spec.version}"
-  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderAdjust.xcframework"
-  
-  spec.dependency 'Adjust', "#{$adjust_sdk_version}"
+  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderGoogle.xcframework"
+
+  spec.dependency 'GoogleSignIn', "#{$google_signin_sdk_version}"
 end

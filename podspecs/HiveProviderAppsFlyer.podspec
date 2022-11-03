@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveProviderAppsFlyer"
-  spec.version      = "4.16.2-beta1"
+  spec.version      = "4.16.2-beta2"
   $appsflyer_sdk_version = "6.5.2"
   spec.summary      = "HiveProviderAppsFlyer optional framework  "
   spec.description  = "HiveProviderAppsFlyer to use AppsFlyer with Hive SDK"
@@ -20,6 +20,5 @@ Pod::Spec.new do |spec|
   $vendored_frameworks_path = "Hive_SDK_iOS_Provider_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderAppsFlyer.xcframework"
 
-  spec.dependency 'HiveSDK'
   spec.dependency 'AppsFlyerFramework', "#{$appsflyer_sdk_version}"
 end

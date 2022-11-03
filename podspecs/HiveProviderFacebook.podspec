@@ -1,9 +1,9 @@
 Pod::Spec.new do |spec|
-  spec.name         = "HiveProviderAdjust"
+  spec.name         = "HiveProviderFacebook"
   spec.version      = "4.16.2-beta2"
-  $adjust_sdk_version = "4.29.7"
-  spec.summary      = "HiveProviderAdjust optional framework  "
-  spec.description  = "HiveProviderAdjust to use Adjust with Hive SDK"
+  $facebook_sdk_version = "13.2.0"
+  spec.summary      = "HiveProviderFacebook optional framework"
+  spec.description  = "HiveProviderFacebook to use Facebook sign-in with Hive SDK."
   spec.homepage     = "https://developers.withhive.com/"
   spec.license      = {
     :type => 'Apache License 2.0', 
@@ -18,7 +18,9 @@ Pod::Spec.new do |spec|
   }
 
   $vendored_frameworks_path = "Hive_SDK_iOS_Provider_v#{spec.version}"
-  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderAdjust.xcframework"
-  
-  spec.dependency 'Adjust', "#{$adjust_sdk_version}"
+  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderFacebook.xcframework"
+
+  spec.dependency 'FBSDKCoreKit', "#{$facebook_sdk_version}"
+  spec.dependency 'FBSDKLoginKit', "#{$facebook_sdk_version}"
+  spec.dependency 'FBSDKShareKit', "#{$facebook_sdk_version}"
 end

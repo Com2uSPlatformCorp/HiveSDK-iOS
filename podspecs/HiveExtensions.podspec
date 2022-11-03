@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveExtensions"
-  spec.version      = "4.16.2-beta1"
+  spec.version      = "4.16.2-beta2"
   spec.summary      = "HiveExtensions optional framework"
   spec.description  = "HiveExtensions to extend push notification service."
   spec.homepage     = "https://developers.withhive.com/"
@@ -18,6 +18,4 @@ Pod::Spec.new do |spec|
 
   $vendored_frameworks_path = "Hive_SDK_iOS_Core_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HiveExtensions.xcframework"
-
-  spec.dependency 'HiveSDK'
 end

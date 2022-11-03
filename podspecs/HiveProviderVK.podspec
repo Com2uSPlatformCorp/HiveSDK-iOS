@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveProviderVK"
-  spec.version      = "4.16.2-beta1"
+  spec.version      = "4.16.2-beta2"
   $vk_sdk_ios_version = "1.6.1"
   spec.summary      = "HiveProviderVK optional framework"
   spec.description  = "HiveProviderVK to use VK sign-in with Hive SDK."
@@ -20,7 +20,6 @@ Pod::Spec.new do |spec|
   $vendored_frameworks_path = "Hive_SDK_iOS_Provider_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderVK.xcframework"
 
-  spec.dependency 'HiveSDK'
   spec.dependency 'VK-ios-sdk', "#{$vk_sdk_ios_version}"
 
   spec.pod_target_xcconfig = { 'VALID_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }
