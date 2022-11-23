@@ -14,7 +14,7 @@ Pod::Spec.new do |spec|
   spec.swift_version = "5.0"
 
   spec.source       = { 
-    :http => "https://github.com/seokjinyong/HiveSDK/releases/download/#{spec.version}/Hive_SDK_iOS_Plugin_v#{spec.version}.zip",
+    :http => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/Hive_SDK_iOS_Plugin_v#{spec.version}.zip"
   }
 
   spec.dependency 'HiveSDK'
