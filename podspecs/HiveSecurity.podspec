@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveSecurity"
-  spec.version      = "4.16.2-beta2"
+  spec.version      = "4.16.2-beta3"
   spec.summary      = "HiveSecurity optional framework"
   spec.description  = "HiveSecurity to use Hive security service."
   spec.homepage     = "https://developers.withhive.com/"
