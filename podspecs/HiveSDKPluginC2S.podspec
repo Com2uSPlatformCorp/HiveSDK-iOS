@@ -17,8 +17,6 @@ Pod::Spec.new do |spec|
     :http => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/Hive_SDK_iOS_C2S_V1_Plugin_v#{spec.version}.zip"
   }
 
-  spec.dependency 'HiveSDK'
-
   $vendored_frameworks_path = "Hive_SDK_iOS_C2S_V1_Plugin_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HIVE_SDK_Plugin_C2S.xcframework"
 end
