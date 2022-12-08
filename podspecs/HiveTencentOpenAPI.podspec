@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveTencentOpenAPI"
-  spec.version      = "4.16.2-beta3"
+  spec.version      = "4.16.2-beta4"
   $tencent_open_api_version = "3.5.12"
   spec.summary      = "TencentOpenAPI(#{$tencent_open_api_version}) pod framework"
   spec.description  = "HiveTencentOpenAPI to use QQ sign-in with HiveProviderQQ"
