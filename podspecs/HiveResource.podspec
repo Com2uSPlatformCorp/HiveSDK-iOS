@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveResource"
-  spec.version      = "4.16.2"
+  spec.version      = "4.20.2.1-beta1"
   spec.summary      = "HiveResource.bundle"
   spec.description  = "Hive SDK resource bundle. Required bundle to use Hive SDK."
   spec.homepage     = "https://developers.withhive.com/"

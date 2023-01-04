@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveProviderAdjust"
-  spec.version      = "4.16.2"
+  spec.version      = "4.20.2.1-beta1"
   $adjust_sdk_version = "4.32.1"
   spec.summary      = "HiveProviderAdjust optional framework  "
   spec.description  = "HiveProviderAdjust to use Adjust with Hive SDK"
@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
     :file => 'LICENSE'
   }
   spec.author       = { "Com2usPlatrformCorp" => "pc@com2us.com" }
-  spec.platform     = :ios, "11.0"
+  spec.platform     = :ios, "10.0"
   spec.swift_version = "5.0"
 
   spec.source       = { 

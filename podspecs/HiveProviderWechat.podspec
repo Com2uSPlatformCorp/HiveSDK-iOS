@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveProviderWechat"
-  spec.version      = "4.16.2"
+  spec.version      = "4.20.2.1-beta1"
   spec.summary      = "HiveProviderWechat optional framework"
   spec.description  = "HiveProviderWechat to use Wechat sign-in with Hive SDK."
   spec.homepage     = "https://developers.withhive.com/"
@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
     :file => 'LICENSE'
   }
   spec.author       = { "Com2usPlatrformCorp" => "pc@com2us.com" }
-  spec.platform     = :ios, "11.0"
+  spec.platform     = :ios, "10.0"
   spec.swift_version = "5.0"
 
   spec.source       = { 

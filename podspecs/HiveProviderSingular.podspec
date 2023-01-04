@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveProviderSingular"
-  spec.version      = "4.16.2"
+  spec.version      = "4.20.2.1-beta1"
   $singular_sdk_version = "11.0.10"
   spec.summary      = "HiveProviderSingular optional framework"
   spec.description  = "HiveProviderSingular to use Singular analytics Hive SDK."
@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
     :file => 'LICENSE'
   }
   spec.author       = { "Com2usPlatrformCorp" => "pc@com2us.com" }
-  spec.platform     = :ios, "11.0"
+  spec.platform     = :ios, "10.0"
   spec.swift_version = "5.0"
 
   spec.source       = { 
