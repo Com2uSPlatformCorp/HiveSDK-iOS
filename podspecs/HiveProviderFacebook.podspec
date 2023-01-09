@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveProviderFacebook"
-  spec.version      = "4.16.2.1-beta1"
+  spec.version      = "4.16.2.1-beta2"
   $facebook_sdk_version = "12.3.0"
   spec.summary      = "HiveProviderFacebook optional framework"
   spec.description  = "HiveProviderFacebook to use Facebook sign-in with Hive SDK."
