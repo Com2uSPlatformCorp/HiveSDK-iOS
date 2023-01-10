@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
     :file => 'LICENSE'
   }
   spec.author       = { "Com2usPlatrformCorp" => "pc@com2us.com" }
-  spec.platform     = :ios, "11.0"
+  spec.platform     = :ios, "10.0"
   spec.swift_version = "5.0"
 
   spec.source       = { 
@@ -20,13 +20,18 @@ Pod::Spec.new do |spec|
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderFacebook.xcframework"
 
   # subspecs
-  spec.default_subspec = 'Facebook13'
+  spec.default_subspecs = 'FacebookDefault'
+
+  spec.subspec 'FacebookDefault' do |fb|
+    fb.dependency 'FBSDKCoreKit'
+    fb.dependency 'FBSDKLoginKit'
+    fb.dependency 'FBSDKShareKit'
+  end
 
   spec.subspec 'Facebook12' do |fb12|
     fb12.dependency 'FBSDKCoreKit', '12.3.0'
     fb12.dependency 'FBSDKLoginKit', '12.3.0'
     fb12.dependency 'FBSDKShareKit', '12.3.0'
-    fb12.platform = :ios, "10.0"
   end
 
   spec.subspec 'Facebook13' do |fb13|
