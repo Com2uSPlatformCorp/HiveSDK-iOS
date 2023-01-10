@@ -20,7 +20,13 @@ Pod::Spec.new do |spec|
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderFacebook.xcframework"
 
   # subspecs
-  spec.default_subspecs = 'Facebook12'
+  spec.default_subspecs = 'FacebookDefault'
+
+  spec.subspec 'FacebookDefault' do |fb|
+    fb.dependency 'FBSDKCoreKit', '~> 12'
+    fb.dependency 'FBSDKLoginKit', '~> 12'
+    fb.dependency 'FBSDKShareKit', '~> 12'
+  end
 
   spec.subspec 'Facebook12' do |fb12|
     fb12.dependency 'FBSDKCoreKit', '12.3.0'
