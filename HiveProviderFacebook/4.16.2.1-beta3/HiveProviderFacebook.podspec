@@ -23,9 +23,9 @@ Pod::Spec.new do |spec|
   spec.default_subspecs = 'FacebookDefault'
 
   spec.subspec 'FacebookDefault' do |fb|
-    fb.dependency 'FBSDKCoreKit', '~> 12'
-    fb.dependency 'FBSDKLoginKit', '~> 12'
-    fb.dependency 'FBSDKShareKit', '~> 12'
+    fb.dependency 'FBSDKCoreKit'
+    fb.dependency 'FBSDKLoginKit'
+    fb.dependency 'FBSDKShareKit'
   end
 
   spec.subspec 'Facebook12' do |fb12|
