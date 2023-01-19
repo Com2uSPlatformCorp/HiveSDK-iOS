@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveAppTrackingTransparency"
-  spec.version      = "4.16.2.2-beta1"
+  spec.version      = "4.16.2.2"
   spec.summary      = "HiveAppTrackingTransparency optional framework."
   spec.description  = "HiveAppTrackingTransparency to request user's advertising id. Upper than iOS 14.0 required."
   spec.homepage     = "https://developers.withhive.com/"
