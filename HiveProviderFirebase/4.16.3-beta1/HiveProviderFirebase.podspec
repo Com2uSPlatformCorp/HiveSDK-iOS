@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveProviderFirebase"
   spec.version      = "4.16.3-beta1"
-  $firebase_sdk_version = "9.6.0"
+  $firebase_sdk_version = "10.4.0"
   spec.summary      = "HiveProviderFirebase optional framework"
   spec.description  = "HiveProviderFirebase to use Firebase analytics Hive SDK."
   spec.homepage     = "https://developers.withhive.com/"
