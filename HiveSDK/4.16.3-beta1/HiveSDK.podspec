@@ -7,7 +7,7 @@ Pod::Spec.new do |spec|
   spec.homepage     = "https://developers.withhive.com/"
 
   spec.license      = {
-    :type => "Apache License Version 2.0",
+    :type => "Apache-2.0",
     :file => 'LICENSE'
   }
 
