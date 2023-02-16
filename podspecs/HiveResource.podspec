@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
   spec.description  = "Hive SDK resource bundle. Required bundle to use Hive SDK."
   spec.homepage     = "https://developers.withhive.com/"
   spec.license      = {
-    :type => "Apache License Version 2.0",
+    :type => "Apache-2.0",
     :file => 'LICENSE'
   }
   spec.author       = { "Com2usPlatrformCorp" => "pc@com2us.com" }

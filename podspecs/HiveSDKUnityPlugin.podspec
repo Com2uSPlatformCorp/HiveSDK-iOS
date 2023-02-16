@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
   spec.description  = "HiveSDKUnityPlugin to use HiveSDK for c# unity game engine"
   spec.homepage     = "https://developers.withhive.com/"
   spec.license      = {
-    :type => 'Apache License 2.0', 
+    :type => 'Apache-2.0', 
     :file => 'LICENSE'
   }
 

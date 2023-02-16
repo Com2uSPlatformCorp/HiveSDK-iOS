@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
   spec.description  = "Google reCAPTCHA Enterprise is built on the existing reCAPTCHA API and it uses advanced risk analysis techniques to distinguish between humans and bots. It will be used with HiveRecaptcha"
   spec.homepage     = "https://developers.withhive.com/"
   spec.license      = {
-    :type => 'Apache License 2.0', 
+    :type => 'Apache-2.0', 
     :file => 'LICENSE'
   }
   spec.author       = { "seokjinyong" => "seokjinyong@com2us.com" }
