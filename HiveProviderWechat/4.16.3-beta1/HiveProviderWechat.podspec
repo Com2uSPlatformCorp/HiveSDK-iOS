@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
   spec.description  = "HiveProviderWechat to use Wechat sign-in with Hive SDK."
   spec.homepage     = "https://developers.withhive.com/"
   spec.license      = {
-    :type => 'Apache License 2.0', 
+    :type => 'Apache-2.0', 
     :file => 'LICENSE'
   }
   spec.author       = { "Com2usPlatrformCorp" => "pc@com2us.com" }
