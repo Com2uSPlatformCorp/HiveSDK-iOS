@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
   spec.homepage     = "https://developers.withhive.com/"
   spec.license      = {
     :type => 'Apache-2.0', 
-    :file => "#{Dir.pwd}/LICENSE.txt"
+    :file => "#{Dir.pwd}/../../LICENSE"
   }
   spec.author       = { "seokjinyong" => "seokjinyong@com2us.com" }
   spec.platform     = :ios, "10.0"

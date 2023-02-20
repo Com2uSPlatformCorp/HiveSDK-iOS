@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
 
   spec.license      = {
     :type => "Apache-2.0",
-    :file => "#{Dir.pwd}/LICENSE.txt"
+    :file => "#{Dir.pwd}/../../LICENSE"
   }
 
   spec.author       = { "Com2usPlatrformCorp" => "pc@com2us.com" }
