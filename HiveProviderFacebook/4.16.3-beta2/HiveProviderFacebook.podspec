@@ -46,6 +46,7 @@ Pod::Spec.new do |spec|
     fb13.dependency 'FBSDKCoreKit', FACEBOOK_13_VERSION
     fb13.dependency 'FBSDKLoginKit', FACEBOOK_13_VERSION
     fb13.dependency 'FBSDKShareKit', FACEBOOK_13_VERSION
+    fb13.dependency 'FBSDKGamingServicesKit', FACEBOOK_13_VERSION
     fb13.platform = :ios, "11.0"
   end
 
@@ -53,6 +54,7 @@ Pod::Spec.new do |spec|
     fb15.dependency 'FBSDKCoreKit', FACEBOOK_15_VERSION
     fb15.dependency 'FBSDKLoginKit', FACEBOOK_15_VERSION
     fb15.dependency 'FBSDKShareKit', FACEBOOK_15_VERSION
+    fb15.dependency 'FBSDKGamingServicesKit', FACEBOOK_15_VERSION
     fb15.platform = :ios, "12.0"
   end
 
