@@ -1,4 +1,10 @@
-require_relative 'VersionManager.rb'
+if Dir.exist?('../../../com2usplatformcorp-hivesdk-ios')
+  # Copied HiveSDK-iOS local repo
+  require_relative '../../VersionManager.rb'
+else
+  # Develop
+  require_relative '../VersionManager.rb'
+end
 
 Pod::Spec.new do |spec|
   spec.name         = "HiveSDK"
