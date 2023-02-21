@@ -1,6 +1,8 @@
+require_relative 'VersionManager.rb'
+
 Pod::Spec.new do |spec|
   spec.name         = "HiveProviderWeverse"
-  spec.version      = "4.16.3-beta1"
+  spec.version      = HIVE_SDK_VERSION
   spec.summary      = "HiveProviderWeverse optional framework  "
   spec.description  = "HiveProviderWeverse to use Weverse sign-in with Hive SDK"
   spec.homepage     = "https://developers.withhive.com/"

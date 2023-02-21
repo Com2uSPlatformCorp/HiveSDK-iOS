@@ -1,7 +1,8 @@
+require_relative 'VersionManager.rb'
+
 Pod::Spec.new do |spec|
   spec.name         = "HiveSDK"
-  spec.version      = "4.16.3-beta1"
-  $sd_web_image_sdk_version = "5.13.4"
+  spec.version      = HIVE_SDK_VERSION
   spec.summary      = "Hive SDK required frameworks."
   spec.description  = "Hive SDK frameworks help you to develop your application easily."
   spec.homepage     = "https://developers.withhive.com/"
@@ -28,5 +29,5 @@ Pod::Spec.new do |spec|
                               "#{$vendored_frameworks_path}/HIVEUI.xcframework",
                               "#{$vendored_frameworks_path}/ProviderAdapter.xcframework"
                               
-  spec.dependency 'SDWebImage', "#{$sd_web_image_sdk_version}"
+  spec.dependency 'SDWebImage', SD_WEB_IMAGE_VERSION
 end

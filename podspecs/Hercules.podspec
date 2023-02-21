@@ -1,8 +1,9 @@
+require_relative 'VersionManager.rb'
+
 Pod::Spec.new do |spec|
   spec.name         = "Hercules"
-  spec.version      = "4.16.3-beta1"
-  $hercules_version = "20221031"
-  spec.summary      = "Hercules(#{$hercules_version}) optional framework"
+  spec.version      = HIVE_SDK_VERSION
+  spec.summary      = "Hercules(#{HERCULES_VERSION}) optional framework"
   spec.description  = "Hercules to use security service with Hive SDK"
   spec.homepage     = "https://developers.withhive.com/"
   spec.license      = {

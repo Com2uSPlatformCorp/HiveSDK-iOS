@@ -1,6 +1,8 @@
+require_relative 'VersionManager.rb'
+
 Pod::Spec.new do |spec|
   spec.name         = "HiveResource"
-  spec.version      = "4.16.3-beta1"
+  spec.version      = HIVE_SDK_VERSION
   spec.summary      = "HiveResource.bundle"
   spec.description  = "Hive SDK resource bundle. Required bundle to use Hive SDK."
   spec.homepage     = "https://developers.withhive.com/"

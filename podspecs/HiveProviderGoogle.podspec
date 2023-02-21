@@ -1,7 +1,8 @@
+require_relative 'VersionManager.rb'
+
 Pod::Spec.new do |spec|
   spec.name         = "HiveProviderGoogle"
-  spec.version      = "4.16.3-beta1"
-  $google_signin_sdk_version = "6.2.4"
+  spec.version      = HIVE_SDK_VERSION
   spec.summary      = "HiveProviderGoogle optional framework"
   spec.description  = "HiveProviderGoogle to use Google sign-in with Hive SDK."
   spec.homepage     = "https://developers.withhive.com/"
@@ -20,5 +21,5 @@ Pod::Spec.new do |spec|
   $vendored_frameworks_path = "Hive_SDK_iOS_Provider_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderGoogle.xcframework"
 
-  spec.dependency 'GoogleSignIn', "#{$google_signin_sdk_version}"
+  spec.dependency 'GoogleSignIn', GOOGLE_SIGNIN_VERSION
 end

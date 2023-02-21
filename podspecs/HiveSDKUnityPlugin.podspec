@@ -1,6 +1,8 @@
+require_relative 'VersionManager.rb'
+
 Pod::Spec.new do |spec|
   spec.name         = "HiveSDKUnityPlugin"
-  spec.version      = "4.16.3-beta1"
+  spec.version      = HIVE_SDK_VERSION
   spec.summary      = "HiveSDK c# language version"
   spec.description  = "HiveSDKUnityPlugin to use HiveSDK for c# unity game engine"
   spec.homepage     = "https://developers.withhive.com/"

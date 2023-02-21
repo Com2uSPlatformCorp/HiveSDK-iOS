@@ -1,7 +1,8 @@
+require_relative 'VersionManager.rb'
+
 Pod::Spec.new do |spec|
   spec.name         = "HiveProviderSingular"
-  spec.version      = "4.16.3-beta1"
-  $singular_sdk_version = "12.0.1"
+  spec.version      = HIVE_SDK_VERSION
   spec.summary      = "HiveProviderSingular optional framework"
   spec.description  = "HiveProviderSingular to use Singular analytics Hive SDK."
   spec.homepage     = "https://developers.withhive.com/"
@@ -20,5 +21,5 @@ Pod::Spec.new do |spec|
   $vendored_frameworks_path = "Hive_SDK_iOS_Provider_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderSingular.xcframework"
 
-  spec.dependency 'Singular-SDK', "#{$singular_sdk_version}"
+  spec.dependency 'Singular-SDK', SINGULAR_VERSION
 end

@@ -1,6 +1,8 @@
+require_relative 'VersionManager.rb'
+
 Pod::Spec.new do |spec|
   spec.name         = "HiveGoogleRecaptcha"
-  spec.version      = "4.16.3-beta1"
+  spec.version      = HIVE_SDK_VERSION
   $google_recaptcha_version = "16.0.0"
   $promises_swift_version = "2.1.1"
   $google_data_transport_version = "9.2.0"
