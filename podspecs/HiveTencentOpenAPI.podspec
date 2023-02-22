@@ -1,13 +1,20 @@
+if Dir.exist?('../../../com2usplatformcorp-hivesdk-ios')
+  # Copied HiveSDK-iOS local repo
+  require_relative '../../VersionManager.rb'
+else
+  # Develop
+  require_relative '../VersionManager.rb'
+end
+
 Pod::Spec.new do |spec|
   spec.name         = "HiveTencentOpenAPI"
-  spec.version      = "4.16.3"
-  $tencent_open_api_version = "3.5.12"
-  spec.summary      = "TencentOpenAPI(#{$tencent_open_api_version}) pod framework"
+  spec.version      = HIVE_SDK_VERSION
+  spec.summary      = "TencentOpenAPI(#{TENCENT_OPEN_API_VERSION}) pod framework"
   spec.description  = "HiveTencentOpenAPI to use QQ sign-in with HiveProviderQQ"
   spec.homepage     = "https://developers.withhive.com/"
   spec.license      = {
     :type => 'Apache-2.0', 
-    :file => 'LICENSE'
+    :file => "#{Dir.pwd}/../../LICENSE"
   }
   spec.author       = { "Com2usPlatrformCorp" => "pc@com2us.com" }
   spec.platform     = :ios, "10.0"

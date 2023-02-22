@@ -1,13 +1,20 @@
+if Dir.exist?('../../../com2usplatformcorp-hivesdk-ios')
+  # Copied HiveSDK-iOS local repo
+  require_relative '../../VersionManager.rb'
+else
+  # Develop
+  require_relative '../VersionManager.rb'
+end
+
 Pod::Spec.new do |spec|
   spec.name         = "HiveProviderVK"
-  spec.version      = "4.16.3"
-  $vk_sdk_ios_version = "1.6.3"
+  spec.version      = HIVE_SDK_VERSION
   spec.summary      = "HiveProviderVK optional framework"
   spec.description  = "HiveProviderVK to use VK sign-in with Hive SDK."
   spec.homepage     = "https://developers.withhive.com/"
   spec.license      = {
     :type => 'Apache-2.0', 
-    :file => 'LICENSE'
+    :file => "#{Dir.pwd}/../../LICENSE"
   }
   spec.author       = { "Com2usPlatrformCorp" => "pc@com2us.com" }
   spec.platform     = :ios, "10.0"
@@ -20,7 +27,7 @@ Pod::Spec.new do |spec|
   $vendored_frameworks_path = "Hive_SDK_iOS_Provider_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderVK.xcframework"
 
-  spec.dependency 'VK-ios-sdk', "#{$vk_sdk_ios_version}"
+  spec.dependency 'VK-ios-sdk', VK_VERSION
 
   spec.pod_target_xcconfig = { 'VALID_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }
 end

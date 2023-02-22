@@ -1,12 +1,20 @@
+if Dir.exist?('../../../com2usplatformcorp-hivesdk-ios')
+  # Copied HiveSDK-iOS local repo
+  require_relative '../../VersionManager.rb'
+else
+  # Develop
+  require_relative '../VersionManager.rb'
+end
+
 Pod::Spec.new do |spec|
   spec.name         = "HiveProviderFacebook"
-  spec.version      = "4.16.3"
+  spec.version      = HIVE_SDK_VERSION
   spec.summary      = "HiveProviderFacebook optional framework"
   spec.description  = "HiveProviderFacebook to use Facebook sign-in with Hive SDK."
   spec.homepage     = "https://developers.withhive.com/"
   spec.license      = {
     :type => 'Apache-2.0', 
-    :file => 'LICENSE'
+    :file => "#{Dir.pwd}/../../LICENSE"
   }
   spec.author       = { "Com2usPlatrformCorp" => "pc@com2us.com" }
   spec.platform     = :ios, "10.0"
@@ -29,22 +37,24 @@ Pod::Spec.new do |spec|
   end
 
   spec.subspec 'Facebook12' do |fb12|
-    fb12.dependency 'FBSDKCoreKit', '12.3.0'
-    fb12.dependency 'FBSDKLoginKit', '12.3.0'
-    fb12.dependency 'FBSDKShareKit', '12.3.0'
+    fb12.dependency 'FBSDKCoreKit', FACEBOOK_12_VERSION
+    fb12.dependency 'FBSDKLoginKit', FACEBOOK_12_VERSION
+    fb12.dependency 'FBSDKShareKit', FACEBOOK_12_VERSION
   end
 
   spec.subspec 'Facebook13' do |fb13|
-    fb13.dependency 'FBSDKCoreKit', '13.2.0'
-    fb13.dependency 'FBSDKLoginKit', '13.2.0'
-    fb13.dependency 'FBSDKShareKit', '13.2.0'
+    fb13.dependency 'FBSDKCoreKit', FACEBOOK_13_VERSION
+    fb13.dependency 'FBSDKLoginKit', FACEBOOK_13_VERSION
+    fb13.dependency 'FBSDKShareKit', FACEBOOK_13_VERSION
+    fb13.dependency 'FBSDKGamingServicesKit', FACEBOOK_13_VERSION
     fb13.platform = :ios, "11.0"
   end
 
   spec.subspec 'Facebook15' do |fb15|
-    fb15.dependency 'FBSDKCoreKit', '15.0.0'
-    fb15.dependency 'FBSDKLoginKit', '15.0.0'
-    fb15.dependency 'FBSDKShareKit', '15.0.0'
+    fb15.dependency 'FBSDKCoreKit', FACEBOOK_15_VERSION
+    fb15.dependency 'FBSDKLoginKit', FACEBOOK_15_VERSION
+    fb15.dependency 'FBSDKShareKit', FACEBOOK_15_VERSION
+    fb15.dependency 'FBSDKGamingServicesKit', FACEBOOK_15_VERSION
     fb15.platform = :ios, "12.0"
   end
 
