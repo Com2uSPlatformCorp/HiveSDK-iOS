@@ -1,14 +1,6 @@
-if Dir.exist?('../../../com2usplatformcorp-hivesdk-ios')
-  # Copied HiveSDK-iOS local repo
-  require_relative '../../VersionManager.rb'
-else
-  # Develop
-  require_relative '../VersionManager.rb'
-end
-
 Pod::Spec.new do |spec|
   spec.name         = "HiveProviderAdjust"
-  spec.version      = HIVE_SDK_VERSION
+  spec.version      = "4.16.3.1-beta1"
   spec.summary      = "HiveProviderAdjust optional framework  "
   spec.description  = "HiveProviderAdjust to use Adjust with Hive SDK"
   spec.homepage     = "https://developers.withhive.com/"
@@ -27,5 +19,5 @@ Pod::Spec.new do |spec|
   $vendored_frameworks_path = "Hive_SDK_iOS_Provider_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderAdjust.xcframework"
   
-  spec.dependency 'Adjust', ADJUST_VERSION
+  spec.dependency 'Adjust', "4.33.3"
 end

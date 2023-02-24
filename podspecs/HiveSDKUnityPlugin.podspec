@@ -1,14 +1,6 @@
-if Dir.exist?('../../../com2usplatformcorp-hivesdk-ios')
-  # Copied HiveSDK-iOS local repo
-  require_relative '../../VersionManager.rb'
-else
-  # Develop
-  require_relative '../VersionManager.rb'
-end
-
 Pod::Spec.new do |spec|
   spec.name         = "HiveSDKUnityPlugin"
-  spec.version      = HIVE_SDK_VERSION
+  spec.version      = "4.16.3.1-beta1"
   spec.summary      = "HiveSDK c# language version"
   spec.description  = "HiveSDKUnityPlugin to use HiveSDK for c# unity game engine"
   spec.homepage     = "https://developers.withhive.com/"

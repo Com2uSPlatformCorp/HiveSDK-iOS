@@ -1,14 +1,6 @@
-if Dir.exist?('../../../com2usplatformcorp-hivesdk-ios')
-  # Copied HiveSDK-iOS local repo
-  require_relative '../../VersionManager.rb'
-else
-  # Develop
-  require_relative '../VersionManager.rb'
-end
-
 Pod::Spec.new do |spec|
   spec.name         = "HiveProviderWeverse"
-  spec.version      = HIVE_SDK_VERSION
+  spec.version      = "4.16.3.1-beta1"
   spec.summary      = "HiveProviderWeverse optional framework  "
   spec.description  = "HiveProviderWeverse to use Weverse sign-in with Hive SDK"
   spec.homepage     = "https://developers.withhive.com/"

@@ -1,14 +1,6 @@
-if Dir.exist?('../../../com2usplatformcorp-hivesdk-ios')
-  # Copied HiveSDK-iOS local repo
-  require_relative '../../VersionManager.rb'
-else
-  # Develop
-  require_relative '../VersionManager.rb'
-end
-
 Pod::Spec.new do |spec|
   spec.name         = "HiveProviderGoogle"
-  spec.version      = HIVE_SDK_VERSION
+  spec.version      = "4.16.3.1-beta1"
   spec.summary      = "HiveProviderGoogle optional framework"
   spec.description  = "HiveProviderGoogle to use Google sign-in with Hive SDK."
   spec.homepage     = "https://developers.withhive.com/"
@@ -27,5 +19,5 @@ Pod::Spec.new do |spec|
   $vendored_frameworks_path = "Hive_SDK_iOS_Provider_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderGoogle.xcframework"
 
-  spec.dependency 'GoogleSignIn', GOOGLE_SIGNIN_VERSION
+  spec.dependency 'GoogleSignIn', "6.2.4"
 end

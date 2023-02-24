@@ -1,14 +1,6 @@
-if Dir.exist?('../../../com2usplatformcorp-hivesdk-ios')
-  # Copied HiveSDK-iOS local repo
-  require_relative '../../VersionManager.rb'
-else
-  # Develop
-  require_relative '../VersionManager.rb'
-end
-
 Pod::Spec.new do |spec|
   spec.name         = "HiveSDK"
-  spec.version      = HIVE_SDK_VERSION
+  spec.version      = "4.16.3.1-beta1"
   spec.summary      = "Hive SDK required frameworks."
   spec.description  = "Hive SDK frameworks help you to develop your application easily."
   spec.homepage     = "https://developers.withhive.com/"
@@ -35,5 +27,5 @@ Pod::Spec.new do |spec|
                               "#{$vendored_frameworks_path}/HIVEUI.xcframework",
                               "#{$vendored_frameworks_path}/ProviderAdapter.xcframework"
                               
-  spec.dependency 'SDWebImage', SD_WEB_IMAGE_VERSION
+  spec.dependency 'SDWebImage', "5.13.4"
 end

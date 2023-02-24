@@ -1,14 +1,6 @@
-if Dir.exist?('../../../com2usplatformcorp-hivesdk-ios')
-  # Copied HiveSDK-iOS local repo
-  require_relative '../../VersionManager.rb'
-else
-  # Develop
-  require_relative '../VersionManager.rb'
-end
-
 Pod::Spec.new do |spec|
   spec.name         = "HiveProviderFirebase"
-  spec.version      = HIVE_SDK_VERSION
+  spec.version      = "4.16.3.1-beta1"
   spec.summary      = "HiveProviderFirebase optional framework"
   spec.description  = "HiveProviderFirebase to use Firebase analytics Hive SDK."
   spec.homepage     = "https://developers.withhive.com/"
@@ -27,6 +19,6 @@ Pod::Spec.new do |spec|
   $vendored_frameworks_path = "Hive_SDK_iOS_Provider_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderFirebase.xcframework"
 
-  spec.dependency 'FirebaseCore', FIREBASE_VERSION
-  spec.dependency 'FirebaseAnalytics', FIREBASE_VERSION
+  spec.dependency 'FirebaseCore', "10.4.0"
+  spec.dependency 'FirebaseAnalytics', "10.4.0"
 end

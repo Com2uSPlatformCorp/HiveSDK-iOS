@@ -1,14 +1,6 @@
-if Dir.exist?('../../../com2usplatformcorp-hivesdk-ios')
-  # Copied HiveSDK-iOS local repo
-  require_relative '../../VersionManager.rb'
-else
-  # Develop
-  require_relative '../VersionManager.rb'
-end
-
 Pod::Spec.new do |spec|
   spec.name         = "HiveProviderLine"
-  spec.version      = HIVE_SDK_VERSION
+  spec.version      = "4.16.3.1-beta1"
   spec.summary      = "HiveProviderLine optional framework"
   spec.description  = "HiveProviderLine to use Line sign-in with Hive SDK"
   spec.homepage     = "https://developers.withhive.com/"
@@ -28,5 +20,5 @@ Pod::Spec.new do |spec|
   $vendored_frameworks_path = "Hive_SDK_iOS_Provider_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderLine.xcframework"
 
-  spec.dependency 'LineSDKSwift', LINE_VERSION
+  spec.dependency 'LineSDKSwift', "5.8.2""
 end
