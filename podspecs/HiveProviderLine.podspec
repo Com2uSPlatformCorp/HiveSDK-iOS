@@ -20,5 +20,5 @@ Pod::Spec.new do |spec|
   $vendored_frameworks_path = "Hive_SDK_iOS_Provider_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderLine.xcframework"
 
-  spec.dependency 'LineSDKSwift', "5.8.2""
+  spec.dependency 'LineSDKSwift', "5.8.2"
 end
