@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
     :file => "#{Dir.pwd}/../../LICENSE"
   }
   spec.author       = { "Com2usPlatrformCorp" => "pc@com2us.com" }
-  spec.platform     = :ios, "10.0"
+  spec.platform     = :ios, "11.0"
   spec.swift_version = "5.0"
 
   spec.source       = { 
@@ -26,20 +26,7 @@ Pod::Spec.new do |spec|
     fb.dependency 'FBSDKCoreKit'
     fb.dependency 'FBSDKLoginKit'
     fb.dependency 'FBSDKShareKit'
-  end
-
-  spec.subspec 'Facebook12' do |fb12|
-    fb12.dependency 'FBSDKCoreKit', "12.3.0"
-    fb12.dependency 'FBSDKLoginKit', "12.3.0"
-    fb12.dependency 'FBSDKShareKit', "12.3.0"
-  end
-
-  spec.subspec 'Facebook13' do |fb13|
-    fb13.dependency 'FBSDKCoreKit', "13.2.0"
-    fb13.dependency 'FBSDKLoginKit', "13.2.0"
-    fb13.dependency 'FBSDKShareKit', "13.2.0"
-    fb13.dependency 'FBSDKGamingServicesKit', "13.2.0"
-    fb13.platform = :ios, "11.0"
+    fb.dependency 'FBSDKGamingServicesKit'
   end
 
   spec.subspec 'Facebook15' do |fb15|
