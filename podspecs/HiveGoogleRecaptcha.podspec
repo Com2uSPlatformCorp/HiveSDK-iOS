@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveGoogleRecaptcha"
-  spec.version      = "4.16.4-beta1"
+  spec.version      = "4.16.4.0-beta1"
   $google_recaptcha_version = "16.0.0"
   $promises_swift_version = "2.1.1"
   $google_data_transport_version = "9.2.0"
@@ -14,7 +14,7 @@ Pod::Spec.new do |spec|
     :file => "#{Dir.pwd}/../../LICENSE"
   }
   spec.author       = { "seokjinyong" => "seokjinyong@com2us.com" }
-  spec.platform     = :ios, "10.0"
+  spec.platform     = :ios, "11.0"
   spec.swift_version = "4.0"
   spec.source       = { 
     :http => "https://dl.google.com/dl/cpdc/a5fcc34560b0fa39/RecaptchaEnterprise-16.0.0.tar.gz",

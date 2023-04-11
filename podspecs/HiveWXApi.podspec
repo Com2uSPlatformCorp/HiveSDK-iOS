@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveWXApi"
-  spec.version      = "4.16.4-beta1"
+  spec.version      = "4.16.4.0-beta1"
   spec.summary      = "Wechat WXApi(1.9.6) pod framework"
   spec.description  = "HiveWxApi to use Wechat sign-in with HiveProviderWechat"
   spec.homepage     = "https://developers.withhive.com/"
@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
     :file => "#{Dir.pwd}/../../LICENSE"
   }
   spec.author       = { "Com2usPlatrformCorp" => "pc@com2us.com" }
-  spec.platform     = :ios, "10.0"
+  spec.platform     = :ios, "11.0"
   spec.frameworks   = 'WebKit'
   spec.libraries    = 'c++'
 
