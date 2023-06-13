@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveProviderQQ"
-  spec.version      = "4.21.0.0"
+  spec.version      = "4.21.0.1-beta1"
   spec.summary      = "HiveProviderQQ optional framework"
   spec.description  = "HiveProviderQQ to use QQ sign-in with Hive SDK."
   spec.homepage     = "https://developers.withhive.com/"
