@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveProviderSingular"
-  spec.version      = "4.21.0.1"
+  spec.version      = "4.21.0.2-beta1"
   spec.summary      = "HiveProviderSingular optional framework"
   spec.description  = "HiveProviderSingular to use Singular analytics Hive SDK."
   spec.homepage     = "https://developers.withhive.com/"
