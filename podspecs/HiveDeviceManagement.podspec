@@ -1,8 +1,8 @@
 Pod::Spec.new do |spec|
-  spec.name         = "HiveRecaptcha"
+  spec.name         = "HiveDeviceManagement"
   spec.version      = "4.22.0.0-beta1"
-  spec.summary      = "HiveRecpatcha optional framework"
-  spec.description  = "HiveRecaptcha to use Google reCAPTCHA-Enterprise service when processing GUEST type sign-in with HiveSDK"
+  spec.summary      = "HiveDeviceManagement optional framework  "
+  spec.description  = "HiveDeviceManagement to use DeviceManagement service with Hive SDK"
   spec.homepage     = "https://developers.withhive.com/"
   spec.license      = {
     :type => 'Apache-2.0', 
@@ -17,6 +17,8 @@ Pod::Spec.new do |spec|
   }
 
   $vendored_frameworks_path = "Hive_SDK_iOS_Optional_v#{spec.version}"
-  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HiveRecaptcha.xcframework"
-  spec.dependency 'HiveGoogleRecaptcha'
+
+  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HiveDeviceManagement.xcframework"
+  spec.vendored_resources_path  = "#{$vendored_frameworks_path}/HiveDeviceManagementResource.bundle"
+  
 end
