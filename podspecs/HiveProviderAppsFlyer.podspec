@@ -20,4 +20,5 @@ Pod::Spec.new do |spec|
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderAppsFlyer.xcframework"
 
   spec.dependency 'AppsFlyerFramework', "6.9.1"
+  spec.dependency 'AppsFlyer-AdRevenue', "6.9.1"
 end
