@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
-  spec.name         = "HiveSDK"
+  spec.name         = "HiveSDKLite"
   spec.version      = "4.22.0.0-beta1"
-  spec.summary      = "Hive SDK frameworks including all additional services."
+  spec.summary      = "Hive SDK frameworks including only required services."
   spec.description  = "Hive SDK frameworks help you to develop your application easily."
   spec.homepage     = "https://developers.withhive.com/"
 
@@ -28,12 +28,5 @@ Pod::Spec.new do |spec|
                               "#{$vendored_frameworks_path}/ProviderAdapter.xcframework"
                               
   spec.dependency 'SDWebImage', "5.13.4"  
-  spec.default_subspecs = 'Default'
-
-  spec.subspec 'Default' do |default|
-    default.dependency 'HiveDeviceManagement', "#{spec.version}"
-    default.dependency 'HivePromotion', "#{spec.version}"
-    default.dependency 'HiveRealNameVerification', "#{spec.version}"
-  end
 
 end
