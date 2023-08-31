@@ -19,6 +19,6 @@ Pod::Spec.new do |spec|
   $vendored_frameworks_path = "Hive_SDK_iOS_Provider_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderAppsFlyer.xcframework"
 
-  spec.dependency 'AppsFlyerFramework', "6.9.1"
-  spec.dependency 'AppsFlyer-AdRevenue', "6.9.1"
+  spec.dependency 'AppsFlyerFramework', "6.12.1"
+  spec.dependency 'AppsFlyer-AdRevenue', "6.12.1"
 end
