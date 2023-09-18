@@ -22,5 +22,5 @@ Pod::Spec.new do |spec|
   spec.dependency 'AppsFlyerFramework', "6.9.1"
   spec.dependency 'AppsFlyer-AdRevenue', "6.9.1"
 
-  spec.weak_frameworks 'AdServices'
+  spec.weak_frameworks = 'AdServices'
 end
