@@ -20,6 +20,6 @@ Pod::Spec.new do |spec|
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderAdjust.xcframework"
   
   spec.dependency 'Adjust', "4.33.3"
-
-  spec.weak_frameworks = 'AdServices'
+  
+  spec.weak_frameworks 'AdServices'
 end
