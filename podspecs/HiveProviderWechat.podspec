@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveProviderWechat"
-  spec.version      = "4.21.1.3"
+  spec.version      = "4.21.1.4"
   spec.summary      = "HiveProviderWechat optional framework"
   spec.description  = "HiveProviderWechat to use Wechat sign-in with Hive SDK."
   spec.homepage     = "https://developers.withhive.com/"
