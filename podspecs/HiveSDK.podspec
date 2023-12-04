@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveSDK"
-  spec.version      = "4.22.0.4"
+  spec.version      = "4.23.0.0-beta1"
   spec.summary      = "Hive SDK frameworks including all additional services."
   spec.description  = "Hive SDK frameworks help you to develop your application easily."
   spec.homepage     = "https://developers.withhive.com/"
@@ -19,21 +19,13 @@ Pod::Spec.new do |spec|
   }
 
   $vendored_frameworks_path = "Hive_SDK_iOS_Core_v#{spec.version}"
-  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HIVEBase.xcframework", 
-                              "#{$vendored_frameworks_path}/HIVECore.xcframework",
-                              "#{$vendored_frameworks_path}/HIVEIAPV4.xcframework",
+  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HIVECore.xcframework",
                               "#{$vendored_frameworks_path}/HIVEProtocol.xcframework",
                               "#{$vendored_frameworks_path}/HIVEService.xcframework",
                               "#{$vendored_frameworks_path}/HIVEUI.xcframework",
-                              "#{$vendored_frameworks_path}/ProviderAdapter.xcframework"
+                              "#{$vendored_frameworks_path}/HiveAppTrackingTransparency.xcframework"
+  spec.resource  = "#{$vendored_frameworks_path}/HiveResource.bundle"
+  spec.frameworks = 'AppTrackingTransparency'
                               
-  spec.dependency 'SDWebImage', "5.13.4"  
-  spec.default_subspecs = 'Default'
-
-  spec.subspec 'Default' do |default|
-    default.dependency 'HiveDeviceManagement', "#{spec.version}"
-    default.dependency 'HivePromotion', "#{spec.version}"
-    default.dependency 'HiveRealNameVerification', "#{spec.version}"
-  end
-
+  spec.dependency 'SDWebImage', "5.18.3"  
 end

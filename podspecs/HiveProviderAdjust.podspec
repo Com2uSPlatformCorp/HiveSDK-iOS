@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveProviderAdjust"
-  spec.version      = "4.22.0.4"
+  spec.version      = "4.23.0.0-beta1"
   spec.summary      = "HiveProviderAdjust optional framework  "
   spec.description  = "HiveProviderAdjust to use Adjust with Hive SDK"
   spec.homepage     = "https://developers.withhive.com/"
@@ -19,5 +19,6 @@ Pod::Spec.new do |spec|
   $vendored_frameworks_path = "Hive_SDK_iOS_Provider_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderAdjust.xcframework"
   
-  spec.dependency 'Adjust', "4.33.3"
+  spec.dependency 'Adjust', "4.35.2"
+  spec.dependency 'HiveSDK', "#{spec.version}"
 end

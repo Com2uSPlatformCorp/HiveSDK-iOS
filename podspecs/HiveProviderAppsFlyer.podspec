@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveProviderAppsFlyer"
-  spec.version      = "4.22.0.4"
+  spec.version      = "4.23.0.0-beta1"
   spec.summary      = "HiveProviderAppsFlyer optional framework  "
   spec.description  = "HiveProviderAppsFlyer to use AppsFlyer with Hive SDK"
   spec.homepage     = "https://developers.withhive.com/"
@@ -21,4 +21,5 @@ Pod::Spec.new do |spec|
 
   spec.dependency 'AppsFlyerFramework', "6.12.1"
   spec.dependency 'AppsFlyer-AdRevenue', "6.12.1"
+  spec.dependency 'HiveSDK', "#{spec.version}"
 end

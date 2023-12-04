@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveSDKPluginC2S"
-  spec.version      = "4.22.0.4"
+  spec.version      = "4.23.0.0-beta1"
   spec.summary      = "HiveSDK C2S c/c++ language version"
   spec.description  = "HiveSDKPluginC2S to use HiveSDK C2S for c/c++ game engine"
   spec.homepage     = "https://developers.withhive.com/"
@@ -19,4 +19,6 @@ Pod::Spec.new do |spec|
 
   $vendored_frameworks_path = "Hive_SDK_iOS_C2S_Plugin_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HIVE_SDK_Plugin_C2S.xcframework"
+  
+  spec.dependency 'HiveSDK', "#{spec.version}"
 end

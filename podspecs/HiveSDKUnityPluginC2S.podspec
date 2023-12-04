@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveSDKUnityPluginC2S"
-  spec.version      = "4.22.0.4"
+  spec.version      = "4.23.0.0-beta1"
   spec.summary      = "HiveSDK C2S c# language version"
   spec.description  = "HiveSDKUnityPluginC2S to use HiveSDK C2S for c# unity game engine"
   spec.homepage     = "https://developers.withhive.com/"
@@ -20,6 +20,8 @@ Pod::Spec.new do |spec|
 
   $vendored_frameworks_path = "Hive_SDK_iOS_C2S_Plugin_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HIVE_SDK_UnityPlugin_C2S.xcframework"
+  
+  spec.dependency 'HiveSDK', "#{spec.version}"
 
   spec.user_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
 end

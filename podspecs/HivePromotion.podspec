@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HivePromotion"
-  spec.version      = "4.22.0.4"
+  spec.version      = "4.23.0.0-beta1"
   spec.summary      = "HivePromotion optional framework  "
   spec.description  = "HivePromotion to use Promotion service with Hive SDK"
   spec.homepage     = "https://developers.withhive.com/"
@@ -17,8 +17,8 @@ Pod::Spec.new do |spec|
   }
 
   $vendored_frameworks_path = "Hive_SDK_iOS_Optional_v#{spec.version}"
-
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HivePromotion.xcframework"
   spec.resource  = "#{$vendored_frameworks_path}/HivePromotionResource.bundle"
   
+  spec.dependency 'HiveSDK', "#{spec.version}"
 end

@@ -1,15 +1,15 @@
 Pod::Spec.new do |spec|
-  spec.name         = "HiveRecaptcha"
-  spec.version      = "4.22.0.4"
-  spec.summary      = "HiveRecpatcha optional framework"
-  spec.description  = "HiveRecaptcha to use Google reCAPTCHA-Enterprise service when processing GUEST type sign-in with HiveSDK"
+  spec.name         = "HiveIAPV4"
+  spec.version      = "4.23.0.0-beta1"
+  spec.summary      = "HiveIAPV4 optional framework  "
+  spec.description  = "HiveIAPV4 to use Promotion service with Hive SDK"
   spec.homepage     = "https://developers.withhive.com/"
   spec.license      = {
     :type => 'Apache-2.0', 
     :file => "#{Dir.pwd}/../../LICENSE"
   }
   spec.author       = { "Com2usPlatrformCorp" => "pc@com2us.com" }
-  spec.platform     = :ios, "11.0"
+  spec.platform     = :ios, "12.0"
   spec.swift_version = "5.0"
 
   spec.source       = { 
@@ -17,6 +17,7 @@ Pod::Spec.new do |spec|
   }
 
   $vendored_frameworks_path = "Hive_SDK_iOS_Optional_v#{spec.version}"
-  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HiveRecaptcha.xcframework"
-  spec.dependency 'HiveGoogleRecaptcha'
+  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HIVEIAPV4.xcframework"
+  
+  spec.dependency 'HiveSDK', "#{spec.version}"
 end
