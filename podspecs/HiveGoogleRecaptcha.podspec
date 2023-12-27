@@ -1,14 +1,14 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveGoogleRecaptcha"
   spec.version      = "23.0.0-beta1"
-  spec.summary      = "Google reCAPTCHA(#{$google_recaptcha_version}) pod framework"
-  spec.description  = "Google reCAPTCHA Enterprise is built on the existing reCAPTCHA API and it uses advanced risk analysis techniques to distinguish between humans and bots. It will be used with HiveRecaptcha"
+  spec.summary      = "HiveGoogleRecaptcha optional framework"
+  spec.description  = "HiveGoogleRecaptcha to use Google reCAPTCHA Enterprise when 'GUEST' sign-in with Hive SDK."
   spec.homepage     = "https://developers.withhive.com/"
   spec.license      = {
     :type => 'Apache-2.0', 
     :file => "#{Dir.pwd}/../../LICENSE"
   }
-  spec.author       = { "seokjinyong" => "seokjinyong@com2us.com" }
+  spec.author       = { "Com2usPlatrformCorp" => "pc@com2us.com" }
   spec.platform     = :ios, "12.0"
   spec.swift_version = "5.0"
   spec.source       = { 
