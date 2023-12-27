@@ -1,8 +1,8 @@
 Pod::Spec.new do |spec|
-  spec.name         = "HiveProviderFirebase"
-  spec.version      = "4.22.0.4"
-  spec.summary      = "HiveProviderFirebase optional framework"
-  spec.description  = "HiveProviderFirebase to use Firebase analytics Hive SDK."
+  spec.name         = "HiveAnalyticsProviderSingular"
+  spec.version      = "23.0.0-beta1"
+  spec.summary      = "HiveAnalyticsProviderSingular optional framework"
+  spec.description  = "HiveAnalyticsProviderSingular to use Singular analytics Hive SDK."
   spec.homepage     = "https://developers.withhive.com/"
   spec.license      = {
     :type => 'Apache-2.0', 
@@ -17,8 +17,8 @@ Pod::Spec.new do |spec|
   }
 
   $vendored_frameworks_path = "Hive_SDK_iOS_Provider_v#{spec.version}"
-  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderFirebase.xcframework"
+  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderSingular.xcframework"
 
-  spec.dependency 'FirebaseCore', "10.4.0"
-  spec.dependency 'FirebaseAnalytics', "10.4.0"
+  spec.dependency 'Singular-SDK', "12.1.1"
+  spec.dependency 'HiveSDK', "#{spec.version}"
 end

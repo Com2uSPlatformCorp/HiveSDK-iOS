@@ -1,8 +1,8 @@
 Pod::Spec.new do |spec|
-  spec.name         = "HivePromotion"
+  spec.name         = "HiveDataStore"
   spec.version      = "23.0.0-beta1"
-  spec.summary      = "HivePromotion optional framework  "
-  spec.description  = "HivePromotion to use Promotion service with Hive SDK"
+  spec.summary      = "HiveDataStore optional framework  "
+  spec.description  = "HiveDataStore to use DataStore service with Hive SDK"
   spec.homepage     = "https://developers.withhive.com/"
   spec.license      = {
     :type => 'Apache-2.0', 
@@ -17,8 +17,7 @@ Pod::Spec.new do |spec|
   }
 
   $vendored_frameworks_path = "Hive_SDK_iOS_Optional_v#{spec.version}"
-  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HivePromotion.xcframework"
-  spec.resource  = "#{$vendored_frameworks_path}/HivePromotionResource.bundle"
+  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HiveDataStore.xcframework"
   
   spec.dependency 'HiveSDK', "#{spec.version}"
 end

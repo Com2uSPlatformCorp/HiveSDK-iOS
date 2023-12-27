@@ -1,8 +1,8 @@
 Pod::Spec.new do |spec|
-  spec.name         = "HiveProviderSingular"
-  spec.version      = "4.22.0.4"
-  spec.summary      = "HiveProviderSingular optional framework"
-  spec.description  = "HiveProviderSingular to use Singular analytics Hive SDK."
+  spec.name         = "HiveAuthV4ProviderVK"
+  spec.version      = "23.0.0-beta1"
+  spec.summary      = "HiveAuthV4ProviderVK optional framework"
+  spec.description  = "HiveAuthV4ProviderVK to use VK sign-in with Hive SDK."
   spec.homepage     = "https://developers.withhive.com/"
   spec.license      = {
     :type => 'Apache-2.0', 
@@ -17,7 +17,10 @@ Pod::Spec.new do |spec|
   }
 
   $vendored_frameworks_path = "Hive_SDK_iOS_Provider_v#{spec.version}"
-  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderSingular.xcframework"
+  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderVK.xcframework"
 
-  spec.dependency 'Singular-SDK', "12.0.1"
+  spec.dependency 'VK-ios-sdk', "1.6.4"
+  spec.dependency 'HiveSDK', "#{spec.version}"
+
+  spec.pod_target_xcconfig = { 'VALID_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }
 end

@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   spec.name         = "Hercules"
-  spec.version      = "4.22.0.4"
-  spec.summary      = "Hercules(20221031) optional framework"
+  spec.version      = "23.0.0-beta1"
+  spec.summary      = "Hercules(20231116) optional framework"
   spec.description  = "Hercules to use security service with Hive SDK"
   spec.homepage     = "https://developers.withhive.com/"
   spec.license      = {
@@ -19,4 +19,6 @@ Pod::Spec.new do |spec|
 
   $vendored_frameworks_path = "Hive_SDK_iOS_External_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/Hercules.xcframework"
+  
+  spec.dependency 'HiveSDK', "#{spec.version}"
 end

@@ -1,14 +1,13 @@
 Pod::Spec.new do |spec|
-  spec.name         = "HiveProviderLine"
-  spec.version      = "4.22.0.4"
-  spec.summary      = "HiveProviderLine optional framework"
-  spec.description  = "HiveProviderLine to use Line sign-in with Hive SDK"
+  spec.name         = "HiveAnalyticsProviderAppsFlyer"
+  spec.version      = "23.0.0-beta1"
+  spec.summary      = "HiveAnalyticsProviderAppsFlyer optional framework  "
+  spec.description  = "HiveAnalyticsProviderAppsFlyer to use AppsFlyer with Hive SDK"
   spec.homepage     = "https://developers.withhive.com/"
   spec.license      = {
     :type => 'Apache-2.0', 
     :file => "#{Dir.pwd}/../../LICENSE"
   }
-
   spec.author       = { "Com2usPlatrformCorp" => "pc@com2us.com" }
   spec.platform     = :ios, "11.0"
   spec.swift_version = "5.0"
@@ -18,7 +17,9 @@ Pod::Spec.new do |spec|
   }
 
   $vendored_frameworks_path = "Hive_SDK_iOS_Provider_v#{spec.version}"
-  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderLine.xcframework"
+  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderAppsFlyer.xcframework"
 
-  spec.dependency 'LineSDKSwift', "5.8.2"
+  spec.dependency 'AppsFlyerFramework', "6.12.1"
+  spec.dependency 'AppsFlyer-AdRevenue', "6.12.1"
+  spec.dependency 'HiveSDK', "#{spec.version}"
 end
