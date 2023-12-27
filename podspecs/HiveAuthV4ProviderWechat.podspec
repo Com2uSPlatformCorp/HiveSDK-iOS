@@ -1,8 +1,8 @@
 Pod::Spec.new do |spec|
-  spec.name         = "HiveProviderWechat"
+  spec.name         = "HiveAuthV4ProviderWechat"
   spec.version      = "4.23.0.0-beta1"
-  spec.summary      = "HiveProviderWechat optional framework"
-  spec.description  = "HiveProviderWechat to use Wechat sign-in with Hive SDK."
+  spec.summary      = "HiveAuthV4ProviderWechat optional framework"
+  spec.description  = "HiveAuthV4ProviderWechat to use Wechat sign-in with Hive SDK."
   spec.homepage     = "https://developers.withhive.com/"
   spec.license      = {
     :type => 'Apache-2.0', 

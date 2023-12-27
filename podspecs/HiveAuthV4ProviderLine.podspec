@@ -1,8 +1,8 @@
 Pod::Spec.new do |spec|
-  spec.name         = "HiveProviderLine"
+  spec.name         = "HiveAuthV4ProviderLine"
   spec.version      = "4.23.0.0-beta1"
-  spec.summary      = "HiveProviderLine optional framework"
-  spec.description  = "HiveProviderLine to use Line sign-in with Hive SDK"
+  spec.summary      = "HiveAuthV4ProviderLine optional framework"
+  spec.description  = "HiveAuthV4ProviderLine to use Line sign-in with Hive SDK"
   spec.homepage     = "https://developers.withhive.com/"
   spec.license      = {
     :type => 'Apache-2.0', 

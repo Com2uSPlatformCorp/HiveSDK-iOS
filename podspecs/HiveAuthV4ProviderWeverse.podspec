@@ -1,8 +1,8 @@
 Pod::Spec.new do |spec|
-  spec.name         = "HiveProviderWeverse"
+  spec.name         = "HiveAuthV4ProviderWeverse"
   spec.version      = "4.23.0.0-beta1"
-  spec.summary      = "HiveProviderWeverse optional framework  "
-  spec.description  = "HiveProviderWeverse to use Weverse sign-in with Hive SDK"
+  spec.summary      = "HiveAuthV4ProviderWeverse optional framework  "
+  spec.description  = "HiveAuthV4ProviderWeverse to use Weverse sign-in with Hive SDK"
   spec.homepage     = "https://developers.withhive.com/"
   spec.license      = {
     :type => 'Apache-2.0', 
