@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
     :file => "#{Dir.pwd}/../../LICENSE"
   }
   spec.author       = { "seokjinyong" => "seokjinyong@com2us.com" }
-  spec.platform     = :ios, "11.0"
+  spec.platform     = :ios, "12.0"
   spec.swift_version = "4.0"
   spec.source       = { 
     :http => "https://dl.google.com/dl/cpdc/a5fcc34560b0fa39/RecaptchaEnterprise-16.0.0.tar.gz",

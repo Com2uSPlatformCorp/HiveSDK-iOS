@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
     :file => "#{Dir.pwd}/../../LICENSE"
   }
   spec.author       = { "Com2usPlatrformCorp" => "pc@com2us.com" }
-  spec.platform     = :ios, "11.0"
+  spec.platform     = :ios, "12.0"
   spec.libraries    = 'c++', 'sqlite3'
   spec.swift_version = "5.0"
 

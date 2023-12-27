@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
     :file => "#{Dir.pwd}/../../LICENSE"
   }
   spec.author       = { "Com2usPlatrformCorp" => "pc@com2us.com" }
-  spec.platform     = :ios, "11.0"
+  spec.platform     = :ios, "12.0"
   spec.swift_version = "5.0"
 
   spec.source       = { 
@@ -19,14 +19,9 @@ Pod::Spec.new do |spec|
   $vendored_frameworks_path = "Hive_SDK_iOS_Provider_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderFacebook.xcframework"
   
+  spec.dependency 'FBSDKCoreKit', '16.2.1'
+  spec.dependency 'FBSDKLoginKit', '16.2.1'
+  spec.dependency 'FBSDKShareKit', '16.2.1'
+  spec.dependency 'FBSDKGamingServicesKit', '16.2.1'
   spec.dependency 'HiveSDK', "#{spec.version}"
-  # subspecs
-  spec.default_subspecs = 'FacebookDefault'
-  spec.subspec 'FacebookDefault' do |fb|
-    fb.dependency 'FBSDKCoreKit', '16.2.1'
-    fb.dependency 'FBSDKLoginKit', '16.2.1'
-    fb.dependency 'FBSDKShareKit', '16.2.1'
-    fb.dependency 'FBSDKGamingServicesKit', '16.2.1'
-  end
-
 end
