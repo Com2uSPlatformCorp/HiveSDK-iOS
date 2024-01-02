@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveDeviceManagement"
-  spec.version      = "23.0.0-beta1"
+  spec.version      = "23.0.0-beta2"
   spec.summary      = "HiveDeviceManagement optional framework  "
   spec.description  = "HiveDeviceManagement to use DeviceManagement service with Hive SDK"
   spec.homepage     = "https://developers.withhive.com/"
