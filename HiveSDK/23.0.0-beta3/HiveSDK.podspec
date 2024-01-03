@@ -25,8 +25,8 @@ Pod::Spec.new do |spec|
                               "#{$vendored_frameworks_path}/HIVEUI.xcframework",
                               "#{$vendored_frameworks_path}/HiveAppTrackingTransparency.xcframework"
   spec.resource  = "#{$vendored_frameworks_path}/HiveResource.bundle"
-  spec.resource_bundles = {'HIVECore' => ["#{$vendored_frameworks_path}/HIVECore.xcframework/ios-arm64/**/*.{xcprivacy}"],
-                           'HIVEService' => ["#{$vendored_frameworks_path}/HIVEService.xcframework/ios-arm64/**/*.{xcprivacy}"]} 
+  spec.resource_bundles = {'HIVECorePrivacyInfo' => ["#{$vendored_frameworks_path}/HIVECore.xcframework/ios-arm64/**/*.{xcprivacy}"],
+                           'HIVEServicePrivacyInfo' => ["#{$vendored_frameworks_path}/HIVEService.xcframework/ios-arm64/**/*.{xcprivacy}"]} 
   spec.frameworks = 'AppTrackingTransparency'
                               
   spec.dependency 'SDWebImage', "5.18.3"  
