@@ -20,6 +20,7 @@ Pod::Spec.new do |spec|
 
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HiveRealNameVerification.xcframework"
   spec.resource  = "#{$vendored_frameworks_path}/HiveRealNameVerificationResource.bundle"
-  
+  spec.resource_bundles = {'HiveRealNameVerificationPrivacyInfo' => ["#{$vendored_frameworks_path}/HiveRealNameVerification.xcframework/ios-arm64/HiveRealNameVerification.framework/PrivacyInfo.xcprivacy"]} 
+
   spec.dependency 'HiveSDK', "#{spec.version}"
 end

@@ -19,6 +19,7 @@ Pod::Spec.new do |spec|
   $vendored_frameworks_path = "Hive_SDK_iOS_Optional_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HiveDeviceManagement.xcframework"
   spec.resource  = "#{$vendored_frameworks_path}/HiveDeviceManagementResource.bundle"
-  
+  spec.resource_bundles = {'HiveDeviceManagementPrivacyInfo' => ["#{$vendored_frameworks_path}/HiveDeviceManagement.xcframework/ios-arm64/HiveDeviceManagement.framework/PrivacyInfo.xcprivacy"]} 
+
   spec.dependency 'HiveSDK', "#{spec.version}"
 end
