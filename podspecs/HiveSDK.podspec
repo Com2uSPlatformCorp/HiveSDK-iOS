@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveSDK"
-  spec.version      = "23.2.0"
+  spec.version      = "23.2.1"
   spec.summary      = "Hive SDK frameworks including all additional services."
   spec.description  = "Hive SDK frameworks help you to develop your application easily."
   spec.homepage     = "https://developers.withhive.com/"
@@ -29,5 +29,5 @@ Pod::Spec.new do |spec|
                            'HIVEServicePrivacyInfo' => ["#{$vendored_frameworks_path}/HIVEService.xcframework/ios-arm64/HIVEService.framework/PrivacyInfo.xcprivacy"]} 
   spec.frameworks = 'AppTrackingTransparency'
                               
-  spec.dependency 'SDWebImage', "5.18.3"  
+  spec.dependency 'SDWebImage', "5.18.7"  
 end

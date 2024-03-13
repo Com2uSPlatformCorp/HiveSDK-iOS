@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveIAPV4"
-  spec.version      = "23.2.0"
+  spec.version      = "23.2.1"
   spec.summary      = "HiveIAPV4 optional framework  "
   spec.description  = "HiveIAPV4 to use Promotion service with Hive SDK"
   spec.homepage     = "https://developers.withhive.com/"
