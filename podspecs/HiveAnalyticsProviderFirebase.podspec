@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveAnalyticsProviderFirebase"
-  spec.version      = "23.2.1-beta1"
+  spec.version      = "23.3.0"
   spec.summary      = "HiveAnalyticsProviderFirebase optional framework"
   spec.description  = "HiveAnalyticsProviderFirebase to use Firebase analytics Hive SDK."
   spec.homepage     = "https://developers.withhive.com/"
@@ -19,8 +19,8 @@ Pod::Spec.new do |spec|
   $vendored_frameworks_path = "Hive_SDK_iOS_Provider_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderFirebase.xcframework"
 
-  spec.dependency 'FirebaseCore', "10.20.0"
-  spec.dependency 'FirebaseAnalytics', "10.20.0"
+  spec.dependency 'FirebaseCore', "10.22.0"
+  spec.dependency 'FirebaseAnalytics', "10.22.0"
   spec.dependency 'HiveSDK', "#{spec.version}"
   
 end
