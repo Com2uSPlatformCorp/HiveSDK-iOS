@@ -22,7 +22,7 @@ Pod::Spec.new do |spec|
   spec.default_subspecs = 'LineSDKSwiftDefault'
 
   spec.subspec 'LineSDKSwiftDefault' do |line|
-    line.dependency 'LineSDKSwift', "5.10.0"
+    line.dependency 'LineSDKSwift'
   end
 
   spec.subspec 'LineSDKSwift11' do |line11|
