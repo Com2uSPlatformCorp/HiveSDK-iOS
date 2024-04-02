@@ -19,7 +19,7 @@ Pod::Spec.new do |spec|
   $vendored_frameworks_path = "Hive_SDK_iOS_Provider_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderWechat.xcframework"
 
-  spec.dependency 'HiveWXApi', "#{spec.version}"
+  spec.dependency 'WechatOpenSDK', "2.0.4"
   spec.dependency 'HiveSDK', "#{spec.version}"
 
   spec.pod_target_xcconfig = { 'VALID_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }
