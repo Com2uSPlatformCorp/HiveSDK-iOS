@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveDataStore"
-  spec.version      = "23.2.2"
+  spec.version      = "23.2.3-beta1"
   spec.summary      = "HiveDataStore optional framework  "
   spec.description  = "HiveDataStore to use DataStore service with Hive SDK"
   spec.homepage     = "https://developers.withhive.com/"
