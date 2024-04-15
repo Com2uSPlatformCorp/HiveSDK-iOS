@@ -44,5 +44,5 @@ sed -i '' "s/$PRE_SD_WEB_IMAGE_VERSION/$UPDATE_SD_WEB_IMAGE_VERSION/" HiveSDK.po
 sed -i '' "s/$PRE_SINGULAR_VERSION/$UPDATE_SINGULAR_VERSION/" HiveAnalyticsProviderSingular.podspec
 sed -i '' "s/$PRE_TENCENT_OPEN_API_VERSION/$UPDATE_TENCENT_OPEN_API_VERSION/" HiveTencentOpenAPI.podspec
 sed -i '' "s/$PRE_VK_VERSION/$UPDATE_VK_VERSION/" HiveAuthV4ProviderVK.podspec
-sed -i '' "s/$PRE_WX_API_VERSION/$UPDATE_WX_API_VERSION/" HiveWXApi.podspec
+sed -i '' "s/$PRE_WX_API_VERSION/$UPDATE_WX_API_VERSION/" HiveAuthV4ProviderWechat.podspec
 
