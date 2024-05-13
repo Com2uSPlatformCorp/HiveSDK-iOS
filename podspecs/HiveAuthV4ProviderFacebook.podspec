@@ -15,7 +15,7 @@ Pod::Spec.new do |spec|
   spec.source       = { 
     :http => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/Hive_SDK_iOS_Privacy_v#{spec.version}.zip"
 
-  $vendored_frameworks_path = "Hive_SDK_iOS_Provider_v#{spec.version}"
+  $vendored_frameworks_path = "Hive_SDK_iOS_Privacy_v#{spec.version}"
   # spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderFacebook.xcframework"
   spec.resources  = ["#{$vendored_frameworks_path}/FBAEMKit_Privacy.bundle",
                     "#{$vendored_frameworks_path}/FBSDKCoreKit_Basics_Privacy.bundle",
