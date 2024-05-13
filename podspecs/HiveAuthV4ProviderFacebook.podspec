@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveAuthV4ProviderFacebook"
-  spec.version      = "24.1.0-beta1"
+  spec.version      = "24.1.0-beta2"
   spec.summary      = "HiveAuthV4ProviderFacebook optional framework"
   spec.description  = "HiveAuthV4ProviderFacebook to use Facebook sign-in with Hive SDK."
   spec.homepage     = "https://developers.withhive.com/"
@@ -18,7 +18,14 @@ Pod::Spec.new do |spec|
 
   $vendored_frameworks_path = "Hive_SDK_iOS_Provider_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderFacebook.xcframework"
-  
+
+  $vendored_privacy_path = "Hive_SDK_iOS_Privacy_v#{spec.version}"
+  spec.resources  = "#{$vendored_privacy_path}/FBAEMKit_Privacy.bundle",
+                    "#{$vendored_privacy_path}/FBSDKCoreKit_Basics_Privacy.bundle",
+                    "#{$vendored_privacy_path}/FBSDKCoreKit_Privacy.bundle",
+                    "#{$vendored_privacy_path}/FBSDKLoginKit_Privacy.bundle",
+                    "#{$vendored_privacy_path}/FBSDKShareKit_Privacy.bundle"
+
   spec.dependency 'FBSDKCoreKit', '16.2.1'
   spec.dependency 'FBSDKLoginKit', '16.2.1'
   spec.dependency 'FBSDKShareKit', '16.2.1'
