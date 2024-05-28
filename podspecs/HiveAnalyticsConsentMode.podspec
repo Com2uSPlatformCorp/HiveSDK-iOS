@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveAnalyticsConsentMode"
-  spec.version      = "4.24.1.1-beta1"
+  spec.version      = "4.24.1.1-beta2"
   spec.summary      = "HiveAnalyticsConsentMode optional framework  "
   spec.description  = "HiveAnalyticsConsentMode to use ConsentMode UI with Hive SDK"
   spec.homepage     = "https://developers.withhive.com/"
@@ -19,7 +19,6 @@ Pod::Spec.new do |spec|
   $vendored_frameworks_path = "Hive_SDK_iOS_Optional_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HiveAnalyticsConsentMode.xcframework"
   spec.resource  = "#{$vendored_frameworks_path}/HiveAnalyticsConsentModeResource.bundle"
-  spec.resource_bundles = {'HiveAnalyticsConsentModePrivacyInfo' => ["#{$vendored_frameworks_path}/HiveAnalyticsConsentMode.xcframework/ios-arm64/HiveAnalyticsConsentMode.framework/PrivacyInfo.xcprivacy"]} 
   
   spec.dependency 'HiveSDK', "#{spec.version}"
 end
