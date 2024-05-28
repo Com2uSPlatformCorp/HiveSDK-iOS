@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveRealNameVerification"
-  spec.version      = "24.1.1"
+  spec.version      = "24.1.1_NV-beta1"
   spec.summary      = "HiveRealNameVerification optional framework  "
   spec.description  = "HiveRealNameVerification to use Promotion service with Hive SDK"
   spec.homepage     = "https://developers.withhive.com/"
@@ -20,7 +20,6 @@ Pod::Spec.new do |spec|
 
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HiveRealNameVerification.xcframework"
   spec.resource  = "#{$vendored_frameworks_path}/HiveRealNameVerificationResource.bundle"
-  spec.resource_bundles = {'HiveRealNameVerificationPrivacyInfo' => ["#{$vendored_frameworks_path}/HiveRealNameVerification.xcframework/ios-arm64/HiveRealNameVerification.framework/PrivacyInfo.xcprivacy"]} 
 
   spec.dependency 'HiveSDK', "#{spec.version}"
 end

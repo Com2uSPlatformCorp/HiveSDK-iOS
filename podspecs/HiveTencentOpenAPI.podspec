@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveTencentOpenAPI"
-  spec.version      = "24.1.1"
+  spec.version      = "24.1.1_NV-beta1"
   spec.summary      = "TencentOpenAPI(3.5.16) pod framework"
   spec.description  = "HiveTencentOpenAPI to use QQ sign-in with HiveProviderQQ"
   spec.homepage     = "https://developers.withhive.com/"
@@ -18,7 +18,7 @@ Pod::Spec.new do |spec|
 
   $vendored_frameworks_path = "Hive_SDK_iOS_External_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/TencentOpenAPI.xcframework"
-  spec.resource_bundles = {'TencentOpenApiPrivacyInfo' => ["#{$vendored_frameworks_path}/TencentOpenAPIResource.bundle/PrivacyInfo.xcprivacy"]}
+  spec.resource  = "#{$vendored_frameworks_path}/TencentOpenAPIResource.bundle"
 
   spec.pod_target_xcconfig = { 'VALID_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }
 end
