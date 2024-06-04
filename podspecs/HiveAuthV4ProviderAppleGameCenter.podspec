@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveAuthV4ProviderAppleGameCenter"
-  spec.version      = "24.1.1-beta4"
+  spec.version      = "24.1.1-beta5"
   spec.summary      = "HiveAuthV4ProviderAppleGameCenter optional framework"
   spec.description  = "HiveAuthV4ProviderAppleGameCenter to use Apple Game Center sign-in with Hive SDK."
   spec.homepage     = "https://developers.withhive.com/"
