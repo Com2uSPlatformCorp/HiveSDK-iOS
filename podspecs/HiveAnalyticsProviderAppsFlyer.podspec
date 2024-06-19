@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveAnalyticsProviderAppsFlyer"
-  spec.version      = "23.5.0"
+  spec.version      = "23.5.1"
   spec.summary      = "HiveAnalyticsProviderAppsFlyer optional framework  "
   spec.description  = "HiveAnalyticsProviderAppsFlyer to use AppsFlyer with Hive SDK"
   spec.homepage     = "https://developers.withhive.com/"
