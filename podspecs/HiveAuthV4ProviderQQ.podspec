@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveAuthV4ProviderQQ"
-  spec.version      = "24.2.0-beta1"
+  spec.version      = "24.2.0-beta99"
   spec.summary      = "HiveAuthV4ProviderQQ optional framework"
   spec.description  = "HiveAuthV4ProviderQQ to use QQ sign-in with Hive SDK."
   spec.homepage     = "https://developers.withhive.com/"
@@ -21,7 +21,6 @@ Pod::Spec.new do |spec|
   $vendored_frameworks_path = "Hive_SDK_iOS_Provider_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderQQ.xcframework"
 
-  spec.dependency 'HiveTencentOpenAPI', "#{spec.version}"
   spec.dependency 'HiveSDK', "#{spec.version}"
 
   spec.pod_target_xcconfig = { 'VALID_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }

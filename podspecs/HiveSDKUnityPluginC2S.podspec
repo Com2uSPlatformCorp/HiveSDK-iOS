@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveSDKUnityPluginC2S"
-  spec.version      = "24.2.0-beta1"
+  spec.version      = "24.2.0-beta99"
   spec.summary      = "HiveSDK C2S c# language version"
   spec.description  = "HiveSDKUnityPluginC2S to use HiveSDK C2S for c# unity game engine"
   spec.homepage     = "https://developers.withhive.com/"
@@ -13,6 +13,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "12.0"
   spec.libraries    = 'c++', 'z', 'sqlite3'
   spec.swift_version = "5.0"
+  spec.static_framework = true
 
   spec.source       = { 
     :http => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/Hive_SDK_iOS_C2S_Plugin_v#{spec.version}.zip"
