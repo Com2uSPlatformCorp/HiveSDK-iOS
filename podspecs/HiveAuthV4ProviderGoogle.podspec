@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveAuthV4ProviderGoogle"
-  spec.version      = "24.2.0-beta99"
+  spec.version      = "24.2.0-beta98"
   spec.summary      = "HiveAuthV4ProviderGoogle optional framework"
   spec.description  = "HiveAuthV4ProviderGoogle to use Google sign-in with Hive SDK."
   spec.homepage     = "https://developers.withhive.com/"
