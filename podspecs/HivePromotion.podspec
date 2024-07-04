@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HivePromotion"
-  spec.version      = "24.2.0-beta3"
+  spec.version      = "24.2.0-beta4"
   spec.summary      = "HivePromotion optional framework  "
   spec.description  = "HivePromotion to use Promotion service with Hive SDK"
   spec.homepage     = "https://developers.withhive.com/"
