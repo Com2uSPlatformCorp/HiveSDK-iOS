@@ -17,9 +17,21 @@ Pod::Spec.new do |spec|
   }
 
   $vendored_frameworks_path = "Hive_SDK_iOS_Provider_v#{spec.version}"
-  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderAdjust.xcframework",
-                              "#{$vendored_frameworks_path}/AdjustSigSdk.xcframework"
-  
+  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderAdjust.xcframework"
+
   spec.dependency 'Adjust', "4.38.0"
   spec.dependency 'HiveSDK', "#{spec.version}"
+  
+  # subspecs
+  spec.default_subspecs = 'AdjustDefault'
+
+  spec.subspec 'AdjustDefault' do |adj|
+    adj.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderAdjust.xcframework"
+  end
+
+  spec.subspec 'SignatureV3' do |adjSig|
+  adjSig.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderAdjust.xcframework",
+                                "#{$vendored_frameworks_path}/AdjustSigSdk.xcframework"
+  end
+
 end
