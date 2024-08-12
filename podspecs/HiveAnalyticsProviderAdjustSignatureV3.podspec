@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveAnalyticsProviderAdjustSignatureV3"
-  spec.version      = "24.3.0-beta3"
+  spec.version      = "24.3.0-beta4"
   spec.summary      = "HiveAnalyticsProviderAdjustSignatureV3 optional framework  "
   spec.description  = "HiveAnalyticsProviderAdjustSignatureV3 to use Adjust with Hive SDK"
   spec.homepage     = "https://developers.withhive.com/"
