@@ -1,8 +1,8 @@
 Pod::Spec.new do |spec|
-  spec.name         = "HiveAnalyticsProviderAdjust"
+  spec.name         = "HiveAnalyticsProviderAdjustSignatureV3"
   spec.version      = "24.3.0-beta2"
-  spec.summary      = "HiveAnalyticsProviderAdjust optional framework  "
-  spec.description  = "HiveAnalyticsProviderAdjust to use Adjust with Hive SDK"
+  spec.summary      = "HiveAnalyticsProviderAdjustSignatureV3 optional framework  "
+  spec.description  = "HiveAnalyticsProviderAdjustSignatureV3 to use Adjust with Hive SDK"
   spec.homepage     = "https://developers.withhive.com/"
   spec.license      = {
     :type => 'Apache-2.0', 
@@ -17,19 +17,7 @@ Pod::Spec.new do |spec|
   }
 
   $vendored_frameworks_path = "Hive_SDK_iOS_Provider_v#{spec.version}"
-  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderAdjust.xcframework"
+  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/AdjustSigSdk.xcframework"
 
   spec.dependency 'Adjust', "4.38.0"
-  spec.dependency 'HiveSDK', "#{spec.version}"
-  
-  # subspecs
-  spec.default_subspecs = 'AdjustDefault'
-
-  spec.subspec 'AdjustDefault' do |adj|
-  end
-
-  spec.subspec 'SignatureV3' do |adjSig|
-    adjSig.dependency 'HiveAnalyticsProviderAdjustSignatureV3', "#{spec.version}"
-  end
-
 end
