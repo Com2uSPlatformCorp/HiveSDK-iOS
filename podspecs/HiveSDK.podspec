@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveSDK"
-  spec.version      = "24.3.0-beta5"
+  spec.version      = "24.3.0-beta6"
   spec.summary      = "Hive SDK frameworks including all additional services."
   spec.description  = "Hive SDK frameworks help you to develop your application easily."
   spec.homepage     = "https://developers.withhive.com/"

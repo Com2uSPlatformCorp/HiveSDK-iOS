@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveSDKPlugin"
-  spec.version      = "24.3.0-beta5"
+  spec.version      = "24.3.0-beta6"
   spec.summary      = "HiveSDK c/c++ language version"
   spec.description  = "HiveSDKPlugin to use HiveSDK for c/c++ game engine"
   spec.homepage     = "https://developers.withhive.com/"
