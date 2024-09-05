@@ -1,5 +1,6 @@
 # 이미 podspec에 작성되어있는 버전
 PRE_ADJUST_VERSION="4.38.0"
+PRE_AIRBRIDGE_VERSION="4.1.0"
 PRE_APPSFLYER_VERSION="6.13.1"
 PRE_FACEBOOK_VERSION="16.2.1"
 PRE_FIREBASE_VERSION="10.20.0"
@@ -16,6 +17,7 @@ PRE_WX_API_VERSION="2.0.2"
 
 # 신규로 podspec에 작성할 버전
 UPDATE_ADJUST_VERSION="4.38.4"
+UPDATE_AIRBRIDGE_VERSION="4.1.0"
 UPDATE_APPSFLYER_VERSION="6.14.3"
 UPDATE_FACEBOOK_VERSION="17.0.2"
 UPDATE_FIREBASE_VERSION="10.22.0"
@@ -33,6 +35,7 @@ UPDATE_WX_API_VERSION="2.0.4"
 # 버전 텍스트 교체
 sed -i '' "s/$PRE_ADJUST_VERSION/$UPDATE_ADJUST_VERSION/" HiveAnalyticsProviderAdjust.podspec
 sed -i '' "s/$PRE_ADJUST_VERSION/$UPDATE_ADJUST_VERSION/" HiveAnalyticsProviderAdjustSignatureV3.podspec
+sed -i '' "s/$PRE_AIRBRIDGE_VERSION/$UPDATE_AIRBRIDGE_VERSION/" HiveAnalyticsProviderAirbridge.podspec
 sed -i '' "s/$PRE_APPSFLYER_VERSION/$UPDATE_APPSFLYER_VERSION/" HiveAnalyticsProviderAppsFlyer.podspec
 sed -i '' "s/$PRE_FACEBOOK_VERSION/$UPDATE_FACEBOOK_VERSION/" HiveAuthV4ProviderFacebook.podspec
 sed -i '' "s/$PRE_FIREBASE_VERSION/$UPDATE_FIREBASE_VERSION/" HiveAnalyticsProviderFirebase.podspec
