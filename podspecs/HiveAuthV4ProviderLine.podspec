@@ -26,7 +26,7 @@ Pod::Spec.new do |spec|
   end
 
   spec.subspec 'LineSDKSwift11' do |line11|
-    line11.dependency 'LineSDKSwift', "5.11.0"
+    line11.dependency 'LineSDKSwift', "5.11.2"
     line11.platform = :ios, "13.0"
   end
 
