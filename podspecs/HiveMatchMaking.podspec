@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveMatchMaking"
-  spec.version      = "24.5.2-beta1"
+  spec.version      = "24.5.2"
   spec.summary      = "HiveMatchMaking optional framework"
   spec.description  = "Realtime Matching Service"
   spec.homepage     = "https://developers.withhive.com/"

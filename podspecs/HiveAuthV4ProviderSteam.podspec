@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveAuthV4ProviderSteam"
-  spec.version      = "24.5.2-beta1"
+  spec.version      = "24.5.2"
   spec.summary      = "HiveAuthV4ProviderSteam optional framework  "
   spec.description  = "HiveAuthV4ProviderSteam to use Steam sign-in with Hive SDK"
   spec.homepage     = "https://developers.withhive.com/"
