@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveAnalyticsProviderAdjustSignatureV3"
-  spec.version      = "24.5.2"
+  spec.version      = "25.0.0-beta1"
   spec.summary      = "HiveAnalyticsProviderAdjustSignatureV3 optional framework  "
   spec.description  = "HiveAnalyticsProviderAdjustSignatureV3 to use Adjust with Hive SDK"
   spec.homepage     = "https://developers.withhive.com/"
@@ -19,5 +19,5 @@ Pod::Spec.new do |spec|
   $vendored_frameworks_path = "Hive_SDK_iOS_Provider_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/AdjustSigSdk.xcframework"
 
-  spec.dependency 'Adjust', "4.38.4"
+  spec.dependency 'Adjust', "5.0.1"
 end

@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveSDK"
-  spec.version      = "24.5.2"
+  spec.version      = "25.0.0-beta1"
   spec.summary      = "Hive SDK frameworks including all additional services."
   spec.description  = "Hive SDK frameworks help you to develop your application easily."
   spec.homepage     = "https://developers.withhive.com/"
@@ -30,5 +30,5 @@ Pod::Spec.new do |spec|
                     "#{$vendored_frameworks_path}/HIVEServiceResource.bundle"]
   spec.frameworks = 'AppTrackingTransparency'
                               
-  spec.dependency 'SDWebImage', "5.19.7"  
+  spec.dependency 'SDWebImage', "5.20.0"  
 end

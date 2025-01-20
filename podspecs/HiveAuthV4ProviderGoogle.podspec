@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveAuthV4ProviderGoogle"
-  spec.version      = "24.5.2"
+  spec.version      = "25.0.0-beta1"
   spec.summary      = "HiveAuthV4ProviderGoogle optional framework"
   spec.description  = "HiveAuthV4ProviderGoogle to use Google sign-in with Hive SDK."
   spec.homepage     = "https://developers.withhive.com/"
@@ -19,6 +19,6 @@ Pod::Spec.new do |spec|
   $vendored_frameworks_path = "Hive_SDK_iOS_Provider_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderGoogle.xcframework"
 
-  spec.dependency 'GoogleSignIn', "7.1.0"
+  spec.dependency 'GoogleSignIn', "8.0.0"
   spec.dependency 'HiveSDK', "#{spec.version}"
 end
