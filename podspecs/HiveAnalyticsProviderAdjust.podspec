@@ -21,15 +21,5 @@ Pod::Spec.new do |spec|
 
   spec.dependency 'Adjust', "5.0.1"
   spec.dependency 'HiveSDK', "#{spec.version}"
-  
-  # subspecs
-  spec.default_subspecs = 'AdjustDefault'
-
-  spec.subspec 'AdjustDefault' do |adj|
-  end
-
-  spec.subspec 'SignatureV3' do |adjSig|
-    adjSig.dependency 'HiveAnalyticsProviderAdjustSignatureV3', "#{spec.version}"
-  end
 
 end

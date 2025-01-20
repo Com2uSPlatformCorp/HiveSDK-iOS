@@ -38,7 +38,6 @@ UPDATE_WX_API_VERSION="2.0.4"
 sed -i '' "s/$PRE_IOS_VERSION/$UPDATE_IOS_VERSION/" *.podspec
 sed -i '' "s/$PRE_HIVE_SDK_VERSION/$UPDATE_HIVE_SDK_VERSION/" *.podspec
 sed -i '' "s/$PRE_ADJUST_VERSION/$UPDATE_ADJUST_VERSION/" HiveAnalyticsProviderAdjust.podspec
-sed -i '' "s/$PRE_ADJUST_VERSION/$UPDATE_ADJUST_VERSION/" HiveAnalyticsProviderAdjustSignatureV3.podspec
 sed -i '' "s/$PRE_AIRBRIDGE_VERSION/$UPDATE_AIRBRIDGE_VERSION/" HiveAnalyticsProviderAirbridge.podspec
 sed -i '' "s/$PRE_APPSFLYER_VERSION/$UPDATE_APPSFLYER_VERSION/" HiveAnalyticsProviderAppsFlyer.podspec
 sed -i '' "s/$PRE_FACEBOOK_VERSION/$UPDATE_FACEBOOK_VERSION/" HiveAuthV4ProviderFacebook.podspec
