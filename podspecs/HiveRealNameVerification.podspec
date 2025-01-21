@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
   spec.version      = "25.0.0-beta1"
   spec.summary      = "HiveRealNameVerification optional framework  "
   spec.description  = "HiveRealNameVerification to use Real Name Verification service with Hive SDK"
-  spec.homepage     = "https://developers.withhive.com/"
+  spec.homepage     = "https://developers.hiveplatform.ai/"
   spec.license      = {
     :type => 'Apache-2.0', 
     :file => "#{Dir.pwd}/../../LICENSE"
