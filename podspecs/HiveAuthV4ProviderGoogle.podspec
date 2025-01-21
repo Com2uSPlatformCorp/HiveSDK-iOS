@@ -19,6 +19,13 @@ Pod::Spec.new do |spec|
   $vendored_frameworks_path = "Hive_SDK_iOS_Provider_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderGoogle.xcframework"
 
+  spec.dependency 'GoogleUtilities/AppDelegateSwizzler'
+  spec.dependency 'GoogleUtilities/MethodSwizzler'
+  spec.dependency 'GoogleUtilities/Network'
+  spec.dependency 'GoogleUtilities/NSData+zlib'
+  spec.dependency 'GoogleUtilities/Environment'
+  spec.dependency 'GoogleUtilities/Logger'
+  spec.dependency 'GoogleUtilities/UserDefaults'
   spec.dependency 'GoogleSignIn', "8.0.0"
   spec.dependency 'HiveSDK', "#{spec.version}"
 end
