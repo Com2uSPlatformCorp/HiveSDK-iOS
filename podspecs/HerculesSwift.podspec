@@ -22,12 +22,12 @@ Pod::Spec.new do |spec|
 
   spec.default_subspecs = 'Specified'
 
-  spec.subspec 'Latest' do |herculesL|
-    herculesL.dependency 'Hercules'
-  end
-
   spec.subspec 'Specified' do |herculesS|
     herculesS.dependency 'Hercules', "2024.11.20"
+  end
+
+  spec.subspec 'Latest' do |herculesL|
+    herculesL.dependency 'Hercules'
   end
   
   spec.dependency 'HiveSDK', "#{spec.version}"
