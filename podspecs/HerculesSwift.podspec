@@ -22,8 +22,8 @@ Pod::Spec.new do |spec|
 
   spec.default_subspecs = 'HerculesSpecified'
 
-  spec.subspec 'HerculesDefault' do |herculesD|
-    herculesD.dependency 'Hercules'
+  spec.subspec 'HerculesLatest' do |herculesL|
+    herculesL.dependency 'Hercules'
   end
 
   spec.subspec 'HerculesSpecified' do |herculesS|
