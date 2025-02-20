@@ -20,13 +20,13 @@ Pod::Spec.new do |spec|
   $vendored_frameworks_path = "Hive_SDK_iOS_External_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HerculesSwift.xcframework"
 
-  spec.default_subspecs = 'HerculesSpecified'
+  spec.default_subspecs = 'Specified'
 
-  spec.subspec 'HerculesLatest' do |herculesL|
+  spec.subspec 'Latest' do |herculesL|
     herculesL.dependency 'Hercules'
   end
 
-  spec.subspec 'HerculesSpecified' do |herculesS|
+  spec.subspec 'Specified' do |herculesS|
     herculesS.dependency 'Hercules', "2024.11.20"
   end
   
