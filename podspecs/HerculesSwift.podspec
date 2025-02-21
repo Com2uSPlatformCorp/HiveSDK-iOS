@@ -27,6 +27,7 @@ Pod::Spec.new do |spec|
   end
 
   spec.subspec 'Latest' do |herculesL|
+    herculesL.vendored_frameworks = "#{$vendored_frameworks_path}/HerculesSwift.xcframework"
     herculesL.dependency 'Hercules'
   end
   
