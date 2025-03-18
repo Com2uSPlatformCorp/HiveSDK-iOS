@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveGoogleRecaptcha"
-  spec.version      = "25.1.1"
+  spec.version      = "25.1.1-beta1"
   spec.summary      = "HiveGoogleRecaptcha optional framework"
   spec.description  = "HiveGoogleRecaptcha to use Google reCAPTCHA Enterprise when 'GUEST' sign-in with Hive SDK."
   spec.homepage     = "https://developers.hiveplatform.ai/"
