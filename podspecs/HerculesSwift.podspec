@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   spec.name         = "HerculesSwift"
   spec.version      = "25.2.1"
-  spec.summary      = "Hercules(2024.11.20) optional framework"
+  spec.summary      = "Hercules(2025.02.18) optional framework"
   spec.description  = "Hercules to use security service with Hive SDK"
   spec.homepage     = "https://developers.hiveplatform.ai/"
   spec.license      = {
@@ -23,7 +23,7 @@ Pod::Spec.new do |spec|
   spec.default_subspecs = 'Specified'
 
   spec.subspec 'Specified' do |herculesS|
-    herculesS.dependency 'Hercules', "2024.11.20"
+    herculesS.dependency 'Hercules', "2025.02.18"
   end
 
   spec.subspec 'Latest' do |herculesL|
