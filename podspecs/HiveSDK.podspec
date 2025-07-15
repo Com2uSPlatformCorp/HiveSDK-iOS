@@ -22,8 +22,7 @@ Pod::Spec.new do |spec|
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HIVECore.xcframework",
                               "#{$vendored_frameworks_path}/HIVEProtocol.xcframework",
                               "#{$vendored_frameworks_path}/HIVEService.xcframework",
-                              "#{$vendored_frameworks_path}/HIVEUI.xcframework",
-                              "#{$vendored_frameworks_path}/HiveAppTrackingTransparency.xcframework"
+                              "#{$vendored_frameworks_path}/HIVEUI.xcframework"
 
   spec.resources  = ["#{$vendored_frameworks_path}/HiveResource.bundle",
                     "#{$vendored_frameworks_path}/HIVECoreResource.bundle",
