@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveAnalyticsConsentMode"
-  spec.version      = "25.4.1"
+  spec.version      = "25.4.1-beta1"
   spec.summary      = "HiveAnalyticsConsentMode optional framework  "
   spec.description  = "HiveAnalyticsConsentMode to use ConsentMode UI with Hive SDK"
   spec.homepage     = "https://developers.hiveplatform.ai/"
