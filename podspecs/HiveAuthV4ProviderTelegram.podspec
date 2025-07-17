@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveAuthV4ProviderTelegram"
-  spec.version      = "25.4.1-beta1"
+  spec.version      = "25.4.1"
   spec.summary      = "HiveAuthV4ProviderTelegram optional framework"
   spec.description  = "HiveAuthV4ProviderTelegram to use Telegram sign-in with Hive SDK"
   spec.homepage     = "https://developers.hiveplatform.ai/"
