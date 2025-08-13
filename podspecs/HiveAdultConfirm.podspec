@@ -1,8 +1,8 @@
 Pod::Spec.new do |spec|
-  spec.name         = "HiveDataStore"
+  spec.name         = "HiveAdultConfirm"
   spec.version      = "25.7.0-beta2"
-  spec.summary      = "HiveDataStore optional framework  "
-  spec.description  = "HiveDataStore to use DataStore service with Hive SDK"
+  spec.summary      = "HiveAdultConfirm optional framework  "
+  spec.description  = "HiveAdultConfirm to use DeviceManagement service with Hive SDK"
   spec.homepage     = "https://developers.hiveplatform.ai/"
   spec.license      = {
     :type => 'Apache-2.0', 
@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
   }
 
   $vendored_frameworks_path = "Hive_SDK_iOS_Optional_v#{spec.version}"
-  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HiveDataStore.xcframework"
-  
+  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HiveAdultConfirm.xcframework"
+
   spec.dependency 'HiveSDK', "#{spec.version}"
 end
