@@ -1,8 +1,8 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveAdultConfirm"
-  spec.version      = "25.7.0-beta2"
+  spec.version      = "25.7.0-beta1"
   spec.summary      = "HiveAdultConfirm optional framework  "
-  spec.description  = "HiveAdultConfirm to use DeviceManagement service with Hive SDK"
+  spec.description  = "HiveAdultConfirm to use adult authentication service with Hive SDK"
   spec.homepage     = "https://developers.hiveplatform.ai/"
   spec.license      = {
     :type => 'Apache-2.0', 
