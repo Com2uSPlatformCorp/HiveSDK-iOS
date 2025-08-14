@@ -33,7 +33,8 @@ UPDATE_TENCENT_OPEN_API_VERSION="3.5.17"
 UPDATE_WX_API_VERSION="2.0.4"
 
 # 버전 텍스트 교체
-sed -i '' "s/$PRE_IOS_VERSION/$UPDATE_IOS_VERSION/" *.podspec
+SDK_VERSION_SPEC="spec.version      = \"$UPDATE_HIVE_SDK_VERSION\""
+sed -i '' "s|spec\.version.*=.*|$SDK_VERSION_SPEC|" *.podspec
 sed -i '' "s/$PRE_HIVE_SDK_VERSION/$UPDATE_HIVE_SDK_VERSION/" *.podspec
 sed -i '' "s/$PRE_ADJUST_VERSION/$UPDATE_ADJUST_VERSION/" HiveAnalyticsProviderAdjust.podspec
 sed -i '' "s/$PRE_AIRBRIDGE_VERSION/$UPDATE_AIRBRIDGE_VERSION/" HiveAnalyticsProviderAirbridge.podspec
