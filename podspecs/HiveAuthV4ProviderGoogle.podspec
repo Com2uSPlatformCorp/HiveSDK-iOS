@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveAuthV4ProviderGoogle"
-  spec.version      = "25.7.0"
+  spec.version      = "25.8.0-beta1"
   spec.summary      = "HiveAuthV4ProviderGoogle optional framework"
   spec.description  = "HiveAuthV4ProviderGoogle to use Google sign-in with Hive SDK."
   spec.homepage     = "https://developers.hiveplatform.ai/"
@@ -26,6 +26,6 @@ Pod::Spec.new do |spec|
   spec.dependency 'GoogleUtilities/Environment'
   spec.dependency 'GoogleUtilities/Logger'
   spec.dependency 'GoogleUtilities/UserDefaults'
-  spec.dependency 'GoogleSignIn', "8.0.0"
+  spec.dependency 'GoogleSignIn', "9.0.0"
   spec.dependency 'HiveSDK', "#{spec.version}"
 end
