@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveAnalyticsProviderAdjust"
-  spec.version      = "25.8.0-beta1"
+  spec.version      = "25.8.0"
   spec.summary      = "HiveAnalyticsProviderAdjust optional framework  "
   spec.description  = "HiveAnalyticsProviderAdjust to use Adjust with Hive SDK"
   spec.homepage     = "https://developers.hiveplatform.ai/"
