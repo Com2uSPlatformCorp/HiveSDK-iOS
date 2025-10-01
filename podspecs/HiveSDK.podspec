@@ -14,19 +14,21 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "13.0"
   spec.swift_version = "5.0"
 
+  $vendored_frameworks_path = "#{spec.name}.xcframework.zip"
+
   spec.source       = { 
-    :http => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/Hive_SDK_iOS_Core_v#{spec.version}.zip"
+    :git => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS.git",
+    :tag => "#{spec.version.to_s}"
   }
 
-  $vendored_frameworks_path = "Hive_SDK_iOS_Core_v#{spec.version}"
-  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HIVECore.xcframework",
-                              "#{$vendored_frameworks_path}/HIVEProtocol.xcframework",
-                              "#{$vendored_frameworks_path}/HIVEService.xcframework",
-                              "#{$vendored_frameworks_path}/HIVEUI.xcframework"
+  spec.vendored_frameworks =  "HIVECore.xcframework.zip/HIVECore.xcframework",
+                              "HIVEProtocol.xcframework.zip/HIVEProtocol.xcframework",
+                              "HIVEService.xcframework.zip/HIVEService.xcframework",
+                              "HIVEUI.xcframework.zip/HIVEUI.xcframework"
 
-  spec.resources  = ["#{$vendored_frameworks_path}/HiveResource.bundle",
-                    "#{$vendored_frameworks_path}/HIVECoreResource.bundle",
-                    "#{$vendored_frameworks_path}/HIVEServiceResource.bundle"]
+  spec.resources  = ["HIVEResource.bundle.zip/HIVEResource.bundle",
+                    "HIVECoreResource.bundle.zip/HIVECoreResource.bundle",
+                    "HIVEServiceResource.bundle.zip/HIVEServiceResource.bundle"]
   spec.frameworks = 'AppTrackingTransparency', 'StoreKit'
                               
   spec.dependency 'SDWebImage', "5.21.1"  

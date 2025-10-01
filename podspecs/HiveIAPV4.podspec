@@ -12,15 +12,25 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "13.0"
   spec.swift_version = "5.0"
 
+  $framework_name = "HIVEIAPV4"
+  $vendored_frameworks_path = "#{$framework_name}.xcframework.zip"
+  $resource_name = "#{spec.name}Resource"
+  $resources_path = "#{$resource_name}.bundle.zip"
+
+  $framework_name_repayment = "#{spec.name}Repayment"
+  $vendored_frameworks_path_repayment = "#{$framework_name_repayment}.xcframework.zip"
+  $resource_name_repayment = "#{spec.name}RepaymentResource"
+  $resources_path_repayment = "#{$resource_name_repayment}.bundle.zip"
+
   spec.source       = { 
-    :http => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/Hive_SDK_iOS_Optional_v#{spec.version}.zip"
+    :git => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS.git",
+    :tag => "#{spec.version.to_s}"
   }
 
-  $vendored_frameworks_path = "Hive_SDK_iOS_Optional_v#{spec.version}"
-  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HIVEIAPV4.xcframework",
-                              "#{$vendored_frameworks_path}/HiveIAPV4Repayment.xcframework"
-  spec.resources = ["#{$vendored_frameworks_path}/HiveIAPV4Resource.bundle",
-                   "#{$vendored_frameworks_path}/HiveIAPV4RepaymentResource.bundle"]
+  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/#{$framework_name}.xcframework",
+                              "#{$vendored_frameworks_path_repayment}/#{$framework_name_repayment}.xcframework"
+  spec.resources = ["#{$resources_path}/#{$resource_name}.bundle",
+                   "#{$resources_path_repayment}/#{$resource_name_repayment}Resource.bundle"]
 
   spec.dependency 'HiveSDK', "#{spec.version}"
 end

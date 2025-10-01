@@ -13,12 +13,14 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "13.0"
   spec.swift_version = "5.0"
 
+  $vendored_frameworks_path = "#{spec.name}.xcframework.zip"
+
   spec.source       = { 
-    :http => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/Hive_SDK_iOS_External_v#{spec.version}.zip"
+    :git => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS.git",
+    :tag => "#{spec.version.to_s}"
   }
 
-  $vendored_frameworks_path = "Hive_SDK_iOS_External_v#{spec.version}"
-  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HerculesSwift.xcframework"
+  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/#{spec.name}.xcframework"
 
   spec.default_subspecs = 'Specified'
 
@@ -27,7 +29,7 @@ Pod::Spec.new do |spec|
   end
 
   spec.subspec 'Latest' do |herculesL|
-    herculesL.vendored_frameworks = "#{$vendored_frameworks_path}/HerculesSwift.xcframework"
+    herculesL.vendored_frameworks = "#{$vendored_frameworks_path}/#{spec.name}.xcframework"
     herculesL.dependency 'Hercules'
   end
   
