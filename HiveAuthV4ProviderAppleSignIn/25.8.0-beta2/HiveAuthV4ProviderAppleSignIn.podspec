@@ -23,6 +23,7 @@ Pod::Spec.new do |spec|
     download_xcframework() {
       curl -LO "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/$1.xcframework.zip"
       unzip -o $1.xcframework.zip
+      rm -rf $1.xcframework.zip
     }
     download_xcframework #{$framework_name}
   CMD
