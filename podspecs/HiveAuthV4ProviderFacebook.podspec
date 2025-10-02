@@ -13,20 +13,30 @@ Pod::Spec.new do |spec|
   spec.swift_version = "5.0"
 
   $framework_name = "ProviderFacebook"
-  $vendored_frameworks_path = "#{$framework_name}.xcframework.zip"
-  $additional_resource_path = "FBPrivacyBundle.zip"
+  $additional_resource_name = "FBPrivacyBundle"
 
   spec.source       = { 
     :git => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS.git",
     :tag => "#{spec.version.to_s}"
   }
 
-  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/#{$framework_name}.xcframework"
-  spec.resources  = ["#{$additional_resource_path}/FBAEMKit_Privacy.bundle",
-                    "#{$additional_resource_path}/FBSDKCoreKit_Basics_Privacy.bundle",
-                    "#{$additional_resource_path}/FBSDKCoreKit_Privacy.bundle",
-                    "#{$additional_resource_path}/FBSDKLoginKit_Privacy.bundle",
-                    "#{$additional_resource_path}/FBSDKShareKit_Privacy.bundle"]
+  spec.prepare_command = <<-CMD
+    download_xcframework() {
+      curl -LO "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/$1.xcframework.zip"
+      unzip -o $1.xcframework.zip
+    }
+    download_xcframework #{$framework_name}
+
+    curl -LO "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/#{$additional_resource_name}.zip"
+    unzip -o "#{$additional_resource_name}.zip"
+  CMD
+
+  spec.vendored_frameworks =  "#{$framework_name}.xcframework"
+  spec.resources  = ["#{$additional_resource_name}/FBAEMKit_Privacy.bundle",
+                    "#{$additional_resource_name}/FBSDKCoreKit_Basics_Privacy.bundle",
+                    "#{$additional_resource_name}/FBSDKCoreKit_Privacy.bundle",
+                    "#{$additional_resource_name}/FBSDKLoginKit_Privacy.bundle",
+                    "#{$additional_resource_name}/FBSDKShareKit_Privacy.bundle"]
 
   spec.dependency 'FBSDKCoreKit', '18.0.0'
   spec.dependency 'FBSDKLoginKit', '18.0.0'

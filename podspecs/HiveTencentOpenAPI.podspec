@@ -13,17 +13,27 @@ Pod::Spec.new do |spec|
   spec.frameworks       = 'Security', 'SystemConfiguration', 'CoreTelephony', 'CoreGraphics', 'WebKit'
 
   $framework_name = "TencentOpenAPI"
-  $vendored_frameworks_path = "#{$framework_name}.xcframework.zip"
-  $resource_name = "#{$framework_name}Resource"
-  $resource_path = "#{$resource_name}.bundle.zip"
 
   spec.source       = { 
     :git => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS.git",
     :tag => "#{spec.version.to_s}"
   }
 
-  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/#{$framework_name}.xcframework"
-  spec.resource  = "#{$resource_path}/#{resource_name}.bundle"
+  spec.prepare_command = <<-CMD
+    download_xcframework() {
+      curl -LO "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/$1.xcframework.zip"
+      unzip -o $1.xcframework.zip
+    }
+    download_bundle() {
+      curl -LO "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/$1.bundle.zip"
+      unzip -o $1.bundle.zip
+    }
+    download_xcframework #{$framework_name}
+    download_bundle #{$framework_name}Resource
+  CMD
+
+  spec.vendored_frameworks =  "#{$framework_name}.xcframework"
+  spec.resource  = "#{$framework_name}Resource.bundle"
 
   spec.pod_target_xcconfig = { 'VALID_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }
 end

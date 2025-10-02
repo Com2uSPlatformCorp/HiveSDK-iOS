@@ -15,14 +15,21 @@ Pod::Spec.new do |spec|
   spec.libraries    = 'c++', 'z'
 
   $framework_name = "ProviderQQ"
-  $vendored_frameworks_path = "#{$framework_name}.xcframework.zip"
 
   spec.source       = { 
     :git => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS.git",
     :tag => "#{spec.version.to_s}"
   }
 
-  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/#{$framework_name}.xcframework"
+  spec.prepare_command = <<-CMD
+    download_xcframework() {
+      curl -LO "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/$1.xcframework.zip"
+      unzip -o $1.xcframework.zip
+    }
+    download_xcframework #{$framework_name}
+  CMD
+
+  spec.vendored_frameworks =  "#{$framework_name}.xcframework"
 
   spec.dependency 'HiveTencentOpenAPI', "#{spec.version}"
   spec.dependency 'HiveSDK', "#{spec.version}"

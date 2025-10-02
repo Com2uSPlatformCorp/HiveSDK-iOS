@@ -14,14 +14,21 @@ Pod::Spec.new do |spec|
   spec.swift_version = "5.0"
 
   $framework_name = "HIVE_SDK_Plugin_C2S"
-  $vendored_frameworks_path = "#{$framework_name}.xcframework.zip"
 
   spec.source       = { 
     :git => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS.git",
     :tag => "#{spec.version.to_s}"
   }
 
-  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/#{$framework_name}.xcframework"
+  spec.prepare_command = <<-CMD
+    download_xcframework() {
+      curl -LO "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/$1.xcframework.zip"
+      unzip -o $1.xcframework.zip
+    }
+    download_xcframework #{$framework_name}
+  CMD
+
+  spec.vendored_frameworks =  "#{$framework_name}.xcframework"
   
   spec.dependency 'HiveSDK', "#{spec.version}"
 end

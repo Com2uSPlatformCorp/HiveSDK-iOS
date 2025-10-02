@@ -13,24 +13,35 @@ Pod::Spec.new do |spec|
   spec.swift_version = "5.0"
 
   $framework_name = "HIVEIAPV4"
-  $vendored_frameworks_path = "#{$framework_name}.xcframework.zip"
   $resource_name = "#{spec.name}Resource"
-  $resources_path = "#{$resource_name}.bundle.zip"
 
   $framework_name_repayment = "#{spec.name}Repayment"
-  $vendored_frameworks_path_repayment = "#{$framework_name_repayment}.xcframework.zip"
   $resource_name_repayment = "#{spec.name}RepaymentResource"
-  $resources_path_repayment = "#{$resource_name_repayment}.bundle.zip"
 
   spec.source       = { 
     :git => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS.git",
     :tag => "#{spec.version.to_s}"
   }
 
-  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/#{$framework_name}.xcframework",
-                              "#{$vendored_frameworks_path_repayment}/#{$framework_name_repayment}.xcframework"
-  spec.resources = ["#{$resources_path}/#{$resource_name}.bundle",
-                   "#{$resources_path_repayment}/#{$resource_name_repayment}Resource.bundle"]
+  spec.prepare_command = <<-CMD
+    download_xcframework() {
+      curl -LO "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/$1.xcframework.zip"
+      unzip -o $1.xcframework.zip
+    }
+    download_bundle() {
+      curl -LO "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/$1.bundle.zip"
+      unzip -o $1.bundle.zip
+    }
+    download_xcframework #{$framework_name}
+    download_bundle #{$resource_name}Resource
+    download_xcframework #{$framework_name_repayment}
+    download_bundle #{$resource_name_repayment}
+  CMD
+
+  spec.vendored_frameworks =  "#{$framework_name}.xcframework",
+                              "#{$framework_name_repayment}.xcframework"
+  spec.resources = ["#{$resource_name}.bundle",
+                   "#{$resource_name_repayment}.bundle"]
 
   spec.dependency 'HiveSDK', "#{spec.version}"
 end
