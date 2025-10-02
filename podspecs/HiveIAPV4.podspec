@@ -33,7 +33,7 @@ Pod::Spec.new do |spec|
       unzip -o $1.bundle.zip
     }
     download_xcframework #{$framework_name}
-    download_bundle #{$resource_name}Resource
+    download_bundle #{$resource_name}
     download_xcframework #{$framework_name_repayment}
     download_bundle #{$resource_name_repayment}
   CMD
