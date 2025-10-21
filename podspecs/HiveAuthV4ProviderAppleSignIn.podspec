@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveAuthV4ProviderAppleSignIn"
-  spec.version      = "25.8.1-beta1"
+  spec.version      = "25.8.1"
   spec.summary      = "HiveAuthV4ProviderAppleSignIn optional framework"
   spec.description  = "HiveAuthV4ProviderAppleSignIn to use Apple sign-in with Hive SDK."
   spec.homepage     = "https://developers.hiveplatform.ai/"
