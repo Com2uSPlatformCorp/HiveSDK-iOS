@@ -1,8 +1,8 @@
 Pod::Spec.new do |spec|
-  spec.name         = "HiveAnalyticsConsentMode"
+  spec.name         = "HiveIdentityVerification"
   spec.version      = "25.9.0-beta1"
-  spec.summary      = "HiveAnalyticsConsentMode optional framework  "
-  spec.description  = "HiveAnalyticsConsentMode to use ConsentMode UI with Hive SDK"
+  spec.summary      = "HiveIdentityVerification optional framework  "
+  spec.description  = "HiveIdentityVerification to use identity authentication service with Hive SDK"
   spec.homepage     = "https://developers.hiveplatform.ai/"
   spec.license      = {
     :type => 'Apache-2.0', 
@@ -17,8 +17,7 @@ Pod::Spec.new do |spec|
   }
 
   $vendored_frameworks_path = "Hive_SDK_iOS_Optional_v#{spec.version}"
-  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HiveAnalyticsConsentMode.xcframework"
-  spec.resource  = "#{$vendored_frameworks_path}/HiveAnalyticsConsentModeResource.bundle"
-  
+  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HiveIdentityVerification.xcframework"
+
   spec.dependency 'HiveSDK', "#{spec.version}"
 end
