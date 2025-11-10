@@ -12,17 +12,33 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "13.0"
   spec.swift_version = "5.0"
 
+  $framework_name = "ProviderFacebook"
+  $additional_resource_name = "FBPrivacyBundle"
+
   spec.source       = { 
-    :http => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/Hive_SDK_iOS_Provider_v#{spec.version}.zip"
+    :git => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS.git",
+    :tag => "#{spec.version.to_s}"
   }
 
-  $vendored_frameworks_path = "Hive_SDK_iOS_Provider_v#{spec.version}"
-  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderFacebook.xcframework"
-  spec.resources  = ["#{$vendored_frameworks_path}/FBAEMKit_Privacy.bundle",
-                    "#{$vendored_frameworks_path}/FBSDKCoreKit_Basics_Privacy.bundle",
-                    "#{$vendored_frameworks_path}/FBSDKCoreKit_Privacy.bundle",
-                    "#{$vendored_frameworks_path}/FBSDKLoginKit_Privacy.bundle",
-                    "#{$vendored_frameworks_path}/FBSDKShareKit_Privacy.bundle"]
+  spec.prepare_command = <<-CMD
+    download_xcframework() {
+      curl -LO "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/$1.xcframework.zip"
+      unzip -o $1.xcframework.zip
+      rm -rf $1.xcframework.zip
+    }
+    download_xcframework #{$framework_name}
+
+    curl -LO "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/#{$additional_resource_name}.zip"
+    unzip -o "#{$additional_resource_name}.zip"
+    rm -rf "#{$additional_resource_name}.zip"
+  CMD
+
+  spec.vendored_frameworks =  "#{$framework_name}.xcframework"
+  spec.resources  = ["#{$additional_resource_name}/FBAEMKit_Privacy.bundle",
+                    "#{$additional_resource_name}/FBSDKCoreKit_Basics_Privacy.bundle",
+                    "#{$additional_resource_name}/FBSDKCoreKit_Privacy.bundle",
+                    "#{$additional_resource_name}/FBSDKLoginKit_Privacy.bundle",
+                    "#{$additional_resource_name}/FBSDKShareKit_Privacy.bundle"]
 
   spec.dependency 'FBSDKCoreKit', '18.0.0'
   spec.dependency 'FBSDKLoginKit', '18.0.0'
