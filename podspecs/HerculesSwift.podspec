@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HerculesSwift"
-  spec.version      = "26.0.0-beta1"
+  spec.version      = "26.0.0-beta2"
   spec.summary      = "Hercules(2025.02.18) optional framework"
   spec.description  = "Hercules to use security service with Hive SDK"
   spec.homepage     = "https://developers.hiveplatform.ai/"
@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
   }
 
   spec.author       = { "Com2usPlatrformCorp" => "pc@com2us.com" }
-  spec.platform     = :ios, "13.0"
+  spec.platform     = :ios, "15.0"
   spec.swift_version = "5.0"
 
   spec.source       = { 

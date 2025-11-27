@@ -1,6 +1,6 @@
 # 이미 podspec에 작성되어있는 버전
 PRE_IOS_VERSION="13.0"
-PRE_HIVE_SDK_VERSION="25.9.0"
+PRE_HIVE_SDK_VERSION="26.0.0-beta1"
 PRE_ADJUST_VERSION="5.4.3"
 PRE_AIRBRIDGE_VERSION="4.7.0"
 PRE_APPSFLYER_VERSION="6.17.2"
@@ -16,8 +16,8 @@ PRE_TENCENT_OPEN_API_VERSION="3.5.17.5"
 PRE_WX_API_VERSION="2.0.4"
 
 # 신규로 podspec에 작성할 버전
-UPDATE_IOS_VERSION="13.0"
-UPDATE_HIVE_SDK_VERSION="26.0.0-beta1"
+UPDATE_IOS_VERSION="15.0"
+UPDATE_HIVE_SDK_VERSION="26.0.0-beta2"
 UPDATE_ADJUST_VERSION="5.4.3"
 UPDATE_AIRBRIDGE_VERSION="4.7.0"
 UPDATE_APPSFLYER_VERSION="6.17.2"
@@ -34,7 +34,9 @@ UPDATE_WX_API_VERSION="2.0.4"
 
 # 버전 텍스트 교체
 SDK_VERSION_SPEC="spec.version      = \"$UPDATE_HIVE_SDK_VERSION\""
+SDK_IOS_SPEC="spec.platform     = :ios, \"$UPDATE_IOS_VERSION\""
 sed -i '' "s|spec\.version.*=.*|$SDK_VERSION_SPEC|" *.podspec
+sed -i '' "s|spec\.platform.*=.*|$SDK_IOS_SPEC|" *.podspec
 sed -i '' "s/$PRE_HIVE_SDK_VERSION/$UPDATE_HIVE_SDK_VERSION/" *.podspec
 sed -i '' "s/$PRE_ADJUST_VERSION/$UPDATE_ADJUST_VERSION/" HiveAnalyticsProviderAdjust.podspec
 sed -i '' "s/$PRE_AIRBRIDGE_VERSION/$UPDATE_AIRBRIDGE_VERSION/" HiveAnalyticsProviderAirbridge.podspec
