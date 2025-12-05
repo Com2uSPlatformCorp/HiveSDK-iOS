@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveExtensions"
-  spec.version      = "26.0.0-beta3"
+  spec.version      = "26.0.0"
   spec.summary      = "HiveExtensions optional framework"
   spec.description  = "HiveExtensions to extend push notification service."
   spec.homepage     = "https://developers.hiveplatform.ai/"
