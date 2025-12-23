@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveTencentOpenAPI"
   spec.version      = "26.1.0-beta1"
-  spec.summary      = "TencentOpenAPI(3.5.17.5) pod framework"
+  spec.summary      = "TencentOpenAPI(3.5.18) pod framework"
   spec.description  = "HiveTencentOpenAPI to use QQ sign-in with HiveProviderQQ"
   spec.homepage     = "https://developers.hiveplatform.ai/"
   spec.license      = {
@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
     :file => "#{Dir.pwd}/../../LICENSE"
   }
   spec.author       = { "Com2usPlatrformCorp" => "pc@com2us.com" }
-  spec.platform     = :ios, "15.0"
+  spec.platform     = :ios, "13.0"
   spec.frameworks       = 'Security', 'SystemConfiguration', 'CoreTelephony', 'CoreGraphics', 'WebKit'
 
   $framework_name = "TencentOpenAPI"
