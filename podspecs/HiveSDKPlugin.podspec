@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveSDKPlugin"
-  spec.version      = "26.0.1"
+  spec.version      = "26.1.0-beta1"
   spec.summary      = "HiveSDK c/c++ language version"
   spec.description  = "HiveSDKPlugin to use HiveSDK for c/c++ game engine"
   spec.homepage     = "https://developers.hiveplatform.ai/"
@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
     :file => "#{Dir.pwd}/../../LICENSE"
   }
   spec.author       = { "Com2usPlatrformCorp" => "pc@com2us.com" }
-  spec.platform     = :ios, "13.0"
+  spec.platform     = :ios, "15.0"
   spec.libraries    = 'c++', 'sqlite3'
   spec.swift_version = "5.0"
 
