@@ -29,5 +29,5 @@ Pod::Spec.new do |spec|
                     "#{$vendored_frameworks_path}/HIVEServiceResource.bundle"]
   spec.frameworks = 'AppTrackingTransparency', 'StoreKit'
                               
-  spec.dependency 'SDWebImage', "5.21.1"  
+  spec.dependency 'SDWebImage', "5.21.5"  
 end

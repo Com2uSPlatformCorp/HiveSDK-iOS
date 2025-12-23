@@ -24,9 +24,9 @@ Pod::Spec.new do |spec|
                     "#{$vendored_frameworks_path}/FBSDKLoginKit_Privacy.bundle",
                     "#{$vendored_frameworks_path}/FBSDKShareKit_Privacy.bundle"]
 
-  spec.dependency 'FBSDKCoreKit', '18.0.0'
-  spec.dependency 'FBSDKLoginKit', '18.0.0'
-  spec.dependency 'FBSDKShareKit', '18.0.0'
-  spec.dependency 'FBSDKGamingServicesKit', '18.0.0'
+  spec.dependency 'FBSDKCoreKit', '18.0.2'
+  spec.dependency 'FBSDKLoginKit', '18.0.2'
+  spec.dependency 'FBSDKShareKit', '18.0.2'
+  spec.dependency 'FBSDKGamingServicesKit', '18.0.2'
   spec.dependency 'HiveSDK', "#{spec.version}"
 end

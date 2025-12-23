@@ -19,8 +19,8 @@ Pod::Spec.new do |spec|
   $vendored_frameworks_path = "Hive_SDK_iOS_Provider_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderFirebase.xcframework"
 
-  spec.dependency 'FirebaseCore', "11.15.0"
-  spec.dependency 'FirebaseAnalytics', "11.15.0"
+  spec.dependency 'FirebaseCore', "12.5.0"
+  spec.dependency 'FirebaseAnalytics', "12.5.0"
   spec.dependency 'HiveSDK', "#{spec.version}"
   
 end

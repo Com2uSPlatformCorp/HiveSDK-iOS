@@ -19,6 +19,6 @@ Pod::Spec.new do |spec|
   $vendored_frameworks_path = "Hive_SDK_iOS_Provider_v#{spec.version}"
   spec.vendored_frameworks =  "#{$vendored_frameworks_path}/ProviderAirbridge.xcframework"
 
-  spec.dependency 'airbridge-ios-sdk', "4.7.0"
+  spec.dependency 'airbridge-ios-sdk', "4.8.1"
   spec.dependency 'HiveSDK', "#{spec.version}"
 end
