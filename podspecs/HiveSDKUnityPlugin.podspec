@@ -14,12 +14,23 @@ Pod::Spec.new do |spec|
   spec.libraries    = 'c++', 'z', 'sqlite3'
   spec.swift_version = "5.0"
 
+  $framework_name = "HIVE_SDK_UnityPlugin"
+
   spec.source       = { 
-    :http => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/Hive_SDK_iOS_Plugin_v#{spec.version}.zip"
+    :git => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS.git",
+    :tag => "#{spec.version.to_s}"
   }
 
-  $vendored_frameworks_path = "Hive_SDK_iOS_Plugin_v#{spec.version}"
-  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HIVE_SDK_UnityPlugin.xcframework"
+  spec.prepare_command = <<-CMD
+    download_xcframework() {
+      curl -LO "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/$1.xcframework.zip"
+      unzip -o $1.xcframework.zip
+      rm -rf $1.xcframework.zip
+    }
+    download_xcframework #{$framework_name}
+  CMD
+
+  spec.vendored_frameworks =  "#{$framework_name}.xcframework"
   
   spec.dependency 'HiveSDK', "#{spec.version}"
 

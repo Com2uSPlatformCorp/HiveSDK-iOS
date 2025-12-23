@@ -13,11 +13,20 @@ Pod::Spec.new do |spec|
   spec.swift_version = "5.0"
 
   spec.source       = { 
-    :http => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/Hive_SDK_iOS_Optional_v#{spec.version}.zip"
+    :git => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS.git",
+    :tag => "#{spec.version.to_s}"
   }
 
-  $vendored_frameworks_path = "Hive_SDK_iOS_Optional_v#{spec.version}"
-  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/HiveDataStore.xcframework"
+  spec.prepare_command = <<-CMD
+    download_xcframework() {
+      curl -LO "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/$1.xcframework.zip"
+      unzip -o $1.xcframework.zip
+      rm -rf $1.xcframework.zip
+    }
+    download_xcframework #{spec.name}
+  CMD
+
+  spec.vendored_frameworks =  "#{spec.name}.xcframework"
   
   spec.dependency 'HiveSDK', "#{spec.version}"
 end

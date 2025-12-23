@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveTencentOpenAPI"
   spec.version      = "26.1.0-beta1"
-  spec.summary      = "TencentOpenAPI(3.5.18) pod framework"
+  spec.summary      = "TencentOpenAPI(3.5.17.5) pod framework"
   spec.description  = "HiveTencentOpenAPI to use QQ sign-in with HiveProviderQQ"
   spec.homepage     = "https://developers.hiveplatform.ai/"
   spec.license      = {
@@ -12,13 +12,30 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "15.0"
   spec.frameworks       = 'Security', 'SystemConfiguration', 'CoreTelephony', 'CoreGraphics', 'WebKit'
 
+  $framework_name = "TencentOpenAPI"
+
   spec.source       = { 
-    :http => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/Hive_SDK_iOS_External_v#{spec.version}.zip"
+    :git => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS.git",
+    :tag => "#{spec.version.to_s}"
   }
 
-  $vendored_frameworks_path = "Hive_SDK_iOS_External_v#{spec.version}"
-  spec.vendored_frameworks =  "#{$vendored_frameworks_path}/TencentOpenAPI.xcframework"
-  spec.resource  = "#{$vendored_frameworks_path}/TencentOpenAPIResource.bundle"
+  spec.prepare_command = <<-CMD
+    download_xcframework() {
+      curl -LO "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/$1.xcframework.zip"
+      unzip -o $1.xcframework.zip
+      rm -rf $1.xcframework.zip
+    }
+    download_bundle() {
+      curl -LO "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/$1.bundle.zip"
+      unzip -o $1.bundle.zip
+      rm -rf $1.bundle.zip
+    }
+    download_xcframework #{$framework_name}
+    download_bundle #{$framework_name}Resource
+  CMD
+
+  spec.vendored_frameworks =  "#{$framework_name}.xcframework"
+  spec.resource  = "#{$framework_name}Resource.bundle"
 
   spec.pod_target_xcconfig = { 'VALID_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }
 end
