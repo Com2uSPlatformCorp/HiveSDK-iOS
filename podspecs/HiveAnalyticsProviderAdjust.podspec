@@ -29,8 +29,14 @@ Pod::Spec.new do |spec|
   CMD
 
   spec.vendored_frameworks =  "#{$framework_name}.xcframework"
-
-  spec.dependency 'Adjust', "5.4.6"
   spec.dependency 'HiveSDK', "#{spec.version}"
+
+  spec.subspec 'AdjustDefault' do |adjust|
+      adjust.dependency 'Adjust', "5.4.3"
+  end
+
+  spec.subspec 'AdjustGoogleOnDevice' do |adjust|
+      adjust.dependency 'Adjust', "5.4.6"
+  end
 
 end

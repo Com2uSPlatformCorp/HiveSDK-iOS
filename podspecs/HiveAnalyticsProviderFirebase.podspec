@@ -30,8 +30,18 @@ Pod::Spec.new do |spec|
 
   spec.vendored_frameworks =  "#{$framework_name}.xcframework"
 
-  spec.dependency 'FirebaseCore', "12.5.0"
-  spec.dependency 'FirebaseAnalytics', "12.5.0"
+  spec.default_subspecs = 'FirebaseDefault'
   spec.dependency 'HiveSDK', "#{spec.version}"
+
+  spec.subspec 'FirebaseDefault' do |firebase|
+    firebase.dependency 'FirebaseCore', "11.15.0"
+    firebase.dependency 'FirebaseAnalytics', "11.15.0"
+  end
+
+  spec.subspec 'Firebase12' do |firebase|
+    ios.platform = :ios, '15.0'
+    firebase.dependency 'FirebaseCore', "12.5.0"
+    firebase.dependency 'FirebaseAnalytics', "12.5.0"
+  end
   
 end
