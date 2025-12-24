@@ -29,6 +29,7 @@ Pod::Spec.new do |spec|
   CMD
 
   spec.vendored_frameworks =  "#{$framework_name}.xcframework"
+  spec.default_subspecs = 'AdjustDefault'
   spec.dependency 'HiveSDK', "#{spec.version}"
 
   spec.subspec 'AdjustDefault' do |adjust|
