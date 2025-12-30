@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveIdentityVerification"
-  spec.version      = "26.1.0-beta3"
+  spec.version      = "26.1.0-beta4"
   spec.summary      = "HiveIdentityVerification optional framework  "
   spec.description  = "HiveIdentityVerification to use identity authentication service with Hive SDK"
   spec.homepage     = "https://developers.hiveplatform.ai/"
