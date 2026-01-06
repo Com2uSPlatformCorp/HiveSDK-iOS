@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HerculesSwift"
-  spec.version      = "26.1.0-beta4"
+  spec.version      = "26.1.0-beta5"
   spec.summary      = "Hercules(2025.02.18) optional framework"
   spec.description  = "Hercules to use security service with Hive SDK"
   spec.homepage     = "https://developers.hiveplatform.ai/"
