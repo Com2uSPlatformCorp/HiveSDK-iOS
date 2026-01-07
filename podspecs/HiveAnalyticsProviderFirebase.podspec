@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
     :file => "#{Dir.pwd}/../../LICENSE"
   }
   spec.author       = { "Com2usPlatrformCorp" => "pc@com2us.com" }
-  spec.platform     = :ios, "13.0"
+  spec.platform     = :ios, "15.0"
   spec.swift_version = "5.0"
 
   $framework_name = "ProviderFirebase"
@@ -34,14 +34,14 @@ Pod::Spec.new do |spec|
   spec.dependency 'HiveSDK', "#{spec.version}"
 
   spec.subspec 'FirebaseDefault' do |firebase|
-    firebase.dependency 'FirebaseCore', "11.15.0"
-    firebase.dependency 'FirebaseAnalytics', "11.15.0"
-  end
-
-  spec.subspec 'Firebase12' do |firebase|
-    firebase.platform = :ios, '15.0'
     firebase.dependency 'FirebaseCore', "12.5.0"
     firebase.dependency 'FirebaseAnalytics', "12.5.0"
+  end
+
+  spec.subspec 'Firebase11' do |firebase|
+    firebase.platform = :ios, '13.0'
+    firebase.dependency 'FirebaseCore', "11.15.0"
+    firebase.dependency 'FirebaseAnalytics', "11.15.0"
   end
   
 end
