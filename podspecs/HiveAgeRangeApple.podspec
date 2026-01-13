@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveAgeRangeApple"
-  spec.version      = "26.1.0-beta5"
+  spec.version      = "26.1.0"
   spec.summary      = "HiveAgeRangeApple optional framework  "
   spec.description  = "HiveAgeRangeApple to use identity authentication service with Hive SDK"
   spec.homepage     = "https://developers.hiveplatform.ai/"
