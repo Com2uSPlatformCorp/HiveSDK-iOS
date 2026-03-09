@@ -30,5 +30,5 @@ Pod::Spec.new do |spec|
 
   spec.vendored_frameworks =  "#{spec.name}.xcframework"
 
-  spec.dependency 'HiveIdentityVerification', "#{spec.version}"
+  spec.dependency 'HiveSDK', "#{spec.version}"
 end
