@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveChat"
-  spec.version      = "26.3.0-alpha"
+  spec.version      = "26.3.0-alpha2"
   spec.summary      = "HiveChat optional framework"
   spec.description  = "Realtime Chatting Service"
   spec.homepage     = "https://developers.hiveplatform.ai/"
