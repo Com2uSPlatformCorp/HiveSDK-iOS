@@ -32,6 +32,9 @@ UPDATE_SINGULAR_VERSION="12.9.0"
 UPDATE_TENCENT_OPEN_API_VERSION="3.5.18"
 UPDATE_WX_API_VERSION="2.0.4"
 
+# HiveAnalyticsProviderFirebase
+FIREBASE_POD_IOS_VERSION="15.0"
+
 # 버전 텍스트 교체
 SDK_VERSION_SPEC="spec.version      = \"$UPDATE_HIVE_SDK_VERSION\""
 SDK_IOS_SPEC="spec.platform     = :ios, \"$UPDATE_IOS_VERSION\""
@@ -43,6 +46,7 @@ sed -i '' "s/$PRE_AIRBRIDGE_VERSION/$UPDATE_AIRBRIDGE_VERSION/" HiveAnalyticsPro
 sed -i '' "s/$PRE_APPSFLYER_VERSION/$UPDATE_APPSFLYER_VERSION/" HiveAnalyticsProviderAppsFlyer.podspec
 sed -i '' "s/$PRE_FACEBOOK_VERSION/$UPDATE_FACEBOOK_VERSION/" HiveAuthV4ProviderFacebook.podspec
 sed -i '' "s/$PRE_FIREBASE_VERSION/$UPDATE_FIREBASE_VERSION/" HiveAnalyticsProviderFirebase.podspec
+sed -i '' "s|spec\.platform.*=.*|spec.platform     = :ios, \"$FIREBASE_POD_IOS_VERSION\"|" HiveAnalyticsProviderFirebase.podspec
 sed -i '' "s/$PRE_GOOGLE_SIGNIN_VERSION/$UPDATE_GOOGLE_SIGNIN_VERSION/" HiveAuthV4ProviderGoogle.podspec
 sed -i '' "s/$PRE_HERCULES_VERSION/$UPDATE_HERCULES_VERSION/" HerculesSwift.podspec
 sed -i '' "s/$PRE_LINE_VERSION/$UPDATE_LINE_VERSION/" HiveAuthV4ProviderLine.podspec
