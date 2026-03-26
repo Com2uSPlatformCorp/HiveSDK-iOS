@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveIAPV4HiveStore"
-  spec.version      = "26.3.0-alpha3"
+  spec.version      = "26.3.0-beta1"
   spec.summary      = "HiveIAPV4HiveStore optional framework  "
   spec.description  = "HiveIAPV4HiveStore to use Hive Store In-App Purchase service with Hive SDK"
   spec.homepage     = "https://developers.hiveplatform.ai/"
