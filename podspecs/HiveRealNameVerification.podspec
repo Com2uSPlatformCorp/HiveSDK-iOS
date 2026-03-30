@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveRealNameVerification"
-  spec.version      = "26.3.0"
+  spec.version      = "26.3.1-beta1"
   spec.summary      = "HiveRealNameVerification optional framework  "
   spec.description  = "HiveRealNameVerification to use Real Name Verification service with Hive SDK"
   spec.homepage     = "https://developers.hiveplatform.ai/"
