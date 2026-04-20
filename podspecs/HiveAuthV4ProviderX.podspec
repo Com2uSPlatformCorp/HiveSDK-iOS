@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveAuthV4ProviderX"
-  spec.version      = "26.3.1"
+  spec.version      = "26.3.2-beta1"
   spec.summary      = "HiveAuthV4ProviderX optional framework  "
   spec.description  = "HiveAuthV4ProviderX to use X sign-in with Hive SDK"
   spec.homepage     = "https://developers.hiveplatform.ai/"
