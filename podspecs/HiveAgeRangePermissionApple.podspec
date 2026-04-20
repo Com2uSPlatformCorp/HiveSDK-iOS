@@ -1,8 +1,8 @@
 Pod::Spec.new do |spec|
-  spec.name         = "HiveGoogleRecaptcha"
+  spec.name         = "HiveAgeRangePermissionApple"
   spec.version      = "26.3.4-beta1"
-  spec.summary      = "HiveGoogleRecaptcha optional framework"
-  spec.description  = "HiveGoogleRecaptcha to use Google reCAPTCHA Enterprise when 'GUEST' sign-in with Hive SDK."
+  spec.summary      = "HiveAgeRangePermissionApple optional framework  "
+  spec.description  = "HiveAgeRangePermissionApple to use identity authentication service with Hive SDK"
   spec.homepage     = "https://developers.hiveplatform.ai/"
   spec.license      = {
     :type => 'Apache-2.0', 
@@ -12,24 +12,24 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "13.0"
   spec.swift_version = "5.0"
 
-  $framework_name = "HiveRecaptcha"
+  $vendored_frameworks_path = "#{spec.name}.xcframework.zip"
 
   spec.source       = { 
     :git => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS.git",
     :tag => "#{spec.version.to_s}"
   }
-
+  
   spec.prepare_command = <<-CMD
     download_xcframework() {
       curl -LO "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/$1.xcframework.zip"
       unzip -o $1.xcframework.zip
       rm -rf $1.xcframework.zip
     }
-    download_xcframework #{$framework_name}
+    download_xcframework #{spec.name}
   CMD
 
-  spec.vendored_frameworks =  "#{$framework_name}.xcframework"
-  
-  spec.dependency 'RecaptchaEnterprise', '18.7.0'
+  spec.vendored_frameworks =  "#{spec.name}.xcframework"
+
   spec.dependency 'HiveSDK', "#{spec.version}"
+  spec.dependency 'HiveAgeRangeApple', "#{spec.version}"
 end
