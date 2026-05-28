@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveAnalyticsProviderSingular"
-  spec.version      = "26.3.4"
+  spec.version      = "26.4.0-beta1"
   spec.summary      = "HiveAnalyticsProviderSingular optional framework"
   spec.description  = "HiveAnalyticsProviderSingular to use Singular analytics Hive SDK."
   spec.homepage     = "https://developers.hiveplatform.ai/"
@@ -30,6 +30,6 @@ Pod::Spec.new do |spec|
 
   spec.vendored_frameworks =  "#{$framework_name}.xcframework"
 
-  spec.dependency 'Singular-SDK', "12.9.0"
+  spec.dependency 'Singular-SDK', "12.10.0"
   spec.dependency 'HiveSDK', "#{spec.version}"
 end

@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveAnalyticsProviderFirebase"
-  spec.version      = "26.3.4"
+  spec.version      = "26.4.0-beta1"
   spec.summary      = "HiveAnalyticsProviderFirebase optional framework"
   spec.description  = "HiveAnalyticsProviderFirebase to use Firebase analytics Hive SDK."
   spec.homepage     = "https://developers.hiveplatform.ai/"
@@ -35,8 +35,8 @@ Pod::Spec.new do |spec|
 
   spec.subspec 'FirebaseDefault' do |firebase|
     firebase.platform     = :ios, "15.0"
-    firebase.dependency 'FirebaseCore', "12.5.0"
-    firebase.dependency 'FirebaseAnalytics', "12.5.0"
+    firebase.dependency 'FirebaseCore', "12.12.0"
+    firebase.dependency 'FirebaseAnalytics', "12.12.0"
   end
 
   spec.subspec 'Firebase11' do |firebase|

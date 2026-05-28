@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveAuthV4ProviderFacebook"
-  spec.version      = "26.3.4"
+  spec.version      = "26.4.0-beta1"
   spec.summary      = "HiveAuthV4ProviderFacebook optional framework"
   spec.description  = "HiveAuthV4ProviderFacebook to use Facebook sign-in with Hive SDK."
   spec.homepage     = "https://developers.hiveplatform.ai/"
@@ -42,9 +42,9 @@ Pod::Spec.new do |spec|
                     "#{$additional_resource_name}/FBSDKLoginKit_Privacy.bundle",
                     "#{$additional_resource_name}/FBSDKShareKit_Privacy.bundle"]
 
-  spec.dependency 'FBSDKCoreKit', '18.0.2'
-  spec.dependency 'FBSDKLoginKit', '18.0.2'
-  spec.dependency 'FBSDKShareKit', '18.0.2'
-  spec.dependency 'FBSDKGamingServicesKit', '18.0.2'
+  spec.dependency 'FBSDKCoreKit', '18.0.3'
+  spec.dependency 'FBSDKLoginKit', '18.0.3'
+  spec.dependency 'FBSDKShareKit', '18.0.3'
+  spec.dependency 'FBSDKGamingServicesKit', '18.0.3'
   spec.dependency 'HiveSDK', "#{spec.version}"
 end

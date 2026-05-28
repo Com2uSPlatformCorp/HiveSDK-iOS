@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveAuthV4ProviderLine"
-  spec.version      = "26.3.4"
+  spec.version      = "26.4.0-beta1"
   spec.summary      = "HiveAuthV4ProviderLine optional framework"
   spec.description  = "HiveAuthV4ProviderLine to use Line sign-in with Hive SDK"
   spec.homepage     = "https://developers.hiveplatform.ai/"
@@ -30,6 +30,6 @@ Pod::Spec.new do |spec|
   CMD
 
   spec.vendored_frameworks =  "#{$framework_name}.xcframework"
-  spec.dependency 'LineSDKSwift', "5.14.0"
+  spec.dependency 'LineSDKSwift', "5.15.0"
 
 end
