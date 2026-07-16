@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveAuthV4ProviderFuntap"
-  spec.version      = "26.5.0-beta1"
+  spec.version      = "26.5.0"
   spec.summary      = "HiveAuthV4ProviderFuntap optional framework  "
   spec.description  = "HiveAuthV4ProviderFuntap to use Funtap APIs with Hive SDK"
   spec.homepage     = "https://developers.hiveplatform.ai/"

@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveTencentOpenAPI"
-  spec.version      = "26.5.0-beta1"
+  spec.version      = "26.5.0"
   spec.summary      = "TencentOpenAPI(3.6.20) pod framework"
   spec.description  = "HiveTencentOpenAPI to use QQ sign-in with HiveProviderQQ"
   spec.homepage     = "https://developers.hiveplatform.ai/"
