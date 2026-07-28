@@ -1,0 +1,37 @@
+Pod::Spec.new do |spec|
+  spec.name         = "HiveAuthV4ProviderDMM"
+  spec.version      = "26.6.0-beta2"
+  spec.summary      = "HiveAuthV4ProviderDMM optional framework"
+  spec.description  = "HiveAuthV4ProviderDMM to use DMM sign-in with Hive SDK."
+  spec.homepage     = "https://developers.hiveplatform.ai/"
+  spec.license      = {
+    :type => 'Apache-2.0',
+    :file => "#{Dir.pwd}/../../LICENSE"
+  }
+  spec.author       = { "Com2usPlatrformCorp" => "pc@com2us.com" }
+  spec.platform     = :ios, "13.0"
+  spec.swift_version = "5.0"
+
+  $framework_name = "ProviderDMM"
+
+  spec.source       = {
+    :http => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/#{$framework_name}.xcframework.zip",
+    :type => "zip"
+  }
+
+  spec.prepare_command = <<-CMD
+    download_xcframework() {
+      curl -LO "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/$1.xcframework.zip"
+      unzip -o $1.xcframework.zip
+      rm -rf $1.xcframework.zip
+    }
+    download_xcframework DMMOpenAuthSDK
+    download_xcframework DMMGamesLinkIDSDK
+  CMD
+
+  spec.vendored_frameworks = "#{$framework_name}.xcframework",
+                             "DMMOpenAuthSDK.xcframework",
+                             "DMMGamesLinkIDSDK.xcframework"
+
+  spec.dependency 'HiveSDK', "#{spec.version}"
+end
