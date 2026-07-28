@@ -16,18 +16,9 @@ Pod::Spec.new do |spec|
   $framework_name = "HIVE_SDK_Plugin"
 
   spec.source       = { 
-    :git => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS.git",
-    :tag => "#{spec.version.to_s}"
+    :http => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/#{$framework_name}.xcframework.zip",
+    :type => "zip"
   }
-
-  spec.prepare_command = <<-CMD
-    download_xcframework() {
-      curl -LO "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/$1.xcframework.zip"
-      unzip -o $1.xcframework.zip
-      rm -rf $1.xcframework.zip
-    }
-    download_xcframework #{$framework_name}
-  CMD
 
   spec.vendored_frameworks =  "#{$framework_name}.xcframework"
   

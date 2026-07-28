@@ -14,9 +14,9 @@ Pod::Spec.new do |spec|
 
   $framework_name = "ProviderDMM"
 
-  spec.source       = { 
-    :git => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS.git",
-    :tag => "#{spec.version.to_s}"
+  spec.source       = {
+    :http => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/#{$framework_name}.xcframework.zip",
+    :type => "zip"
   }
 
   spec.prepare_command = <<-CMD
@@ -25,7 +25,6 @@ Pod::Spec.new do |spec|
       unzip -o $1.xcframework.zip
       rm -rf $1.xcframework.zip
     }
-    download_xcframework #{$framework_name}
     download_xcframework DMMOpenAuthSDK
     download_xcframework DMMGamesLinkIDSDK
   CMD

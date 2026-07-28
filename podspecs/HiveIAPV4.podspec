@@ -18,9 +18,9 @@ Pod::Spec.new do |spec|
   $framework_name_repayment = "#{spec.name}Repayment"
   $resource_name_repayment = "#{spec.name}RepaymentResource"
 
-  spec.source       = { 
-    :git => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS.git",
-    :tag => "#{spec.version.to_s}"
+  spec.source       = {
+    :http => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/#{$framework_name}.xcframework.zip",
+    :type => "zip"
   }
 
   spec.prepare_command = <<-CMD
@@ -34,7 +34,6 @@ Pod::Spec.new do |spec|
       unzip -o $1.bundle.zip
       rm -rf $1.bundle.zip
     }
-    download_xcframework #{$framework_name}
     download_bundle #{$resource_name}
     download_xcframework #{$framework_name_repayment}
     download_bundle #{$resource_name_repayment}

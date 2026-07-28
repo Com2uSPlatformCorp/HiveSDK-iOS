@@ -15,19 +15,10 @@ Pod::Spec.new do |spec|
   $vendored_frameworks_path = "#{spec.name}.xcframework.zip"
 
   spec.source       = { 
-    :git => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS.git",
-    :tag => "#{spec.version.to_s}"
+    :http => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/#{spec.name}.xcframework.zip",
+    :type => "zip"
   }
   
-  spec.prepare_command = <<-CMD
-    download_xcframework() {
-      curl -LO "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/$1.xcframework.zip"
-      unzip -o $1.xcframework.zip
-      rm -rf $1.xcframework.zip
-    }
-    download_xcframework #{spec.name}
-  CMD
-
   spec.vendored_frameworks =  "#{spec.name}.xcframework"
 
   spec.dependency 'HiveIdentityVerification', "#{spec.version}"

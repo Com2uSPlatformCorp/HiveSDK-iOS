@@ -15,23 +15,17 @@ Pod::Spec.new do |spec|
   $framework_name = "ProviderFacebook"
   $additional_resource_name = "FBPrivacyBundle"
 
-  spec.source       = { 
-    :git => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS.git",
-    :tag => "#{spec.version.to_s}"
+  spec.source       = {
+    :http => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/#{$framework_name}.xcframework.zip",
+    :type => "zip"
   }
 
   spec.prepare_command = <<-CMD
-    download_xcframework() {
-      curl -LO "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/$1.xcframework.zip"
-      unzip -o $1.xcframework.zip
-      rm -rf $1.xcframework.zip
-    }
     download_additional_bundle() {
       curl -LO "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/$1.zip"
       unzip -o "$1.zip"
       rm -rf "$1.zip"
     }
-    download_xcframework #{$framework_name}
     download_additional_bundle #{$additional_resource_name}
   CMD
 
