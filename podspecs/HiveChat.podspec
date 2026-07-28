@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
   spec.description  = "Realtime Chatting Service"
   spec.homepage     = "https://developers.hiveplatform.ai/"
   spec.license      = {
-    :type => 'Apache-2.0', 
+    :type => 'Apache-2.0',
     :file => "#{Dir.pwd}/../../LICENSE"
   }
 
@@ -13,12 +13,12 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "13.0"
   spec.swift_version = "5.0"
 
-  spec.source       = { 
+  spec.source       = {
     :http => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/#{spec.name}.xcframework.zip",
     :type => "zip"
   }
 
-  spec.vendored_frameworks =  "#{spec.name}.xcframework"
-  
+  spec.vendored_frameworks = "#{spec.name}.xcframework"
+
   spec.dependency 'HiveSDK', "#{spec.version}"
 end

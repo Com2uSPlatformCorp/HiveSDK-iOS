@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
   spec.description  = "HiveIAPV4 to use In-App Purchase service with Hive SDK"
   spec.homepage     = "https://developers.hiveplatform.ai/"
   spec.license      = {
-    :type => 'Apache-2.0', 
+    :type => 'Apache-2.0',
     :file => "#{Dir.pwd}/../../LICENSE"
   }
   spec.author       = { "Com2usPlatrformCorp" => "pc@com2us.com" }
@@ -39,8 +39,8 @@ Pod::Spec.new do |spec|
     download_bundle #{$resource_name_repayment}
   CMD
 
-  spec.vendored_frameworks =  "#{$framework_name}.xcframework",
-                              "#{$framework_name_repayment}.xcframework"
+  spec.vendored_frameworks = "#{$framework_name}.xcframework",
+                             "#{$framework_name_repayment}.xcframework"
   spec.resources = ["#{$resource_name}.bundle",
                    "#{$resource_name_repayment}.bundle"]
 

@@ -6,7 +6,7 @@ Pod::Spec.new do |spec|
   spec.homepage     = "https://developers.hiveplatform.ai/"
 
   spec.license      = {
-    :type => "Apache-2.0",
+    :type => 'Apache-2.0',
     :file => "#{Dir.pwd}/../../LICENSE"
   }
 
@@ -14,7 +14,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "13.0"
   spec.swift_version = "5.0"
 
-  spec.source       = { 
+  spec.source       = {
     :git => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS.git",
     :tag => "#{spec.version.to_s}"
   }
@@ -39,15 +39,15 @@ Pod::Spec.new do |spec|
     download_xcframework HIVEProtocol
   CMD
 
-  spec.vendored_frameworks =  "HIVECore.xcframework",
-                              "HIVEProtocol.xcframework",
-                              "HIVEService.xcframework",
-                              "HIVEUI.xcframework"
+  spec.vendored_frameworks = "HIVECore.xcframework",
+                             "HIVEProtocol.xcframework",
+                             "HIVEService.xcframework",
+                             "HIVEUI.xcframework"
 
-  spec.resources  = ["HIVEResource.bundle",
-                    "HIVECoreResource.bundle",
-                    "HIVEServiceResource.bundle"]
+  spec.resources = ["HIVEResource.bundle",
+                   "HIVECoreResource.bundle",
+                   "HIVEServiceResource.bundle"]
   spec.frameworks = 'AppTrackingTransparency', 'StoreKit'
-                              
-  spec.dependency 'SDWebImage', "5.21.7"  
+
+  spec.dependency 'SDWebImage', "5.21.7"
 end

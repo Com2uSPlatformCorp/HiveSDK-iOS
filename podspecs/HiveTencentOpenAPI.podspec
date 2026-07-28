@@ -5,16 +5,16 @@ Pod::Spec.new do |spec|
   spec.description  = "HiveTencentOpenAPI to use QQ sign-in with HiveProviderQQ"
   spec.homepage     = "https://developers.hiveplatform.ai/"
   spec.license      = {
-    :type => 'Apache-2.0', 
+    :type => 'Apache-2.0',
     :file => "#{Dir.pwd}/../../LICENSE"
   }
   spec.author       = { "Com2usPlatrformCorp" => "pc@com2us.com" }
   spec.platform     = :ios, "13.0"
-  spec.frameworks       = 'Security', 'SystemConfiguration', 'CoreTelephony', 'CoreGraphics', 'WebKit'
+  spec.frameworks = 'Security', 'SystemConfiguration', 'CoreTelephony', 'CoreGraphics', 'WebKit'
 
   $framework_name = "TencentOpenAPI"
 
-  spec.source       = { 
+  spec.source       = {
     :http => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/#{$framework_name}.xcframework.zip",
     :type => "zip"
   }
@@ -28,8 +28,8 @@ Pod::Spec.new do |spec|
     download_bundle #{$framework_name}Resource
   CMD
 
-  spec.vendored_frameworks =  "#{$framework_name}.xcframework"
-  spec.resource  = "#{$framework_name}Resource.bundle"
+  spec.vendored_frameworks = "#{$framework_name}.xcframework"
+  spec.resource = "#{$framework_name}Resource.bundle"
 
   spec.pod_target_xcconfig = { 'VALID_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }
 end

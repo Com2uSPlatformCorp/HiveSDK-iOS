@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
   spec.description  = "HiveAuthV4ProviderFacebook to use Facebook sign-in with Hive SDK."
   spec.homepage     = "https://developers.hiveplatform.ai/"
   spec.license      = {
-    :type => 'Apache-2.0', 
+    :type => 'Apache-2.0',
     :file => "#{Dir.pwd}/../../LICENSE"
   }
   spec.author       = { "Com2usPlatrformCorp" => "pc@com2us.com" }
@@ -29,12 +29,12 @@ Pod::Spec.new do |spec|
     download_additional_bundle #{$additional_resource_name}
   CMD
 
-  spec.vendored_frameworks =  "#{$framework_name}.xcframework"
-  spec.resources  = ["#{$additional_resource_name}/FBAEMKit_Privacy.bundle",
-                    "#{$additional_resource_name}/FBSDKCoreKit_Basics_Privacy.bundle",
-                    "#{$additional_resource_name}/FBSDKCoreKit_Privacy.bundle",
-                    "#{$additional_resource_name}/FBSDKLoginKit_Privacy.bundle",
-                    "#{$additional_resource_name}/FBSDKShareKit_Privacy.bundle"]
+  spec.vendored_frameworks = "#{$framework_name}.xcframework"
+  spec.resources = ["#{$additional_resource_name}/FBAEMKit_Privacy.bundle",
+                   "#{$additional_resource_name}/FBSDKCoreKit_Basics_Privacy.bundle",
+                   "#{$additional_resource_name}/FBSDKCoreKit_Privacy.bundle",
+                   "#{$additional_resource_name}/FBSDKLoginKit_Privacy.bundle",
+                   "#{$additional_resource_name}/FBSDKShareKit_Privacy.bundle"]
 
   spec.dependency 'FBSDKCoreKit', '18.0.3'
   spec.dependency 'FBSDKLoginKit', '18.0.3'

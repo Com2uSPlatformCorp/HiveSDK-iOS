@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
   spec.description  = "HiveAuthV4ProviderAppleGameCenter to use Apple Game Center sign-in with Hive SDK."
   spec.homepage     = "https://developers.hiveplatform.ai/"
   spec.license      = {
-    :type => 'Apache-2.0', 
+    :type => 'Apache-2.0',
     :file => "#{Dir.pwd}/../../LICENSE"
   }
   spec.author       = { "Com2usPlatrformCorp" => "pc@com2us.com" }
@@ -14,12 +14,12 @@ Pod::Spec.new do |spec|
 
   $framework_name = "ProviderApple"
 
-  spec.source       = { 
+  spec.source       = {
     :http => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/#{$framework_name}.xcframework.zip",
     :type => "zip"
   }
 
-  spec.vendored_frameworks =  "#{$framework_name}.xcframework"
+  spec.vendored_frameworks = "#{$framework_name}.xcframework"
   spec.frameworks = 'GameKit'
   spec.dependency 'HiveSDK', "#{spec.version}"
 end

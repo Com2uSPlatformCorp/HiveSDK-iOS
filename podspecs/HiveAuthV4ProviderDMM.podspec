@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
   spec.description  = "HiveAuthV4ProviderDMM to use DMM sign-in with Hive SDK."
   spec.homepage     = "https://developers.hiveplatform.ai/"
   spec.license      = {
-    :type => 'Apache-2.0', 
+    :type => 'Apache-2.0',
     :file => "#{Dir.pwd}/../../LICENSE"
   }
   spec.author       = { "Com2usPlatrformCorp" => "pc@com2us.com" }
@@ -29,9 +29,9 @@ Pod::Spec.new do |spec|
     download_xcframework DMMGamesLinkIDSDK
   CMD
 
-  spec.vendored_frameworks =  "#{$framework_name}.xcframework",
-                              "DMMOpenAuthSDK.xcframework",
-                              "DMM.DMMGamesLinkIDSDK"
+  spec.vendored_frameworks = "#{$framework_name}.xcframework",
+                             "DMMOpenAuthSDK.xcframework",
+                             "DMMGamesLinkIDSDK.xcframework"
 
   spec.dependency 'HiveSDK', "#{spec.version}"
 end
