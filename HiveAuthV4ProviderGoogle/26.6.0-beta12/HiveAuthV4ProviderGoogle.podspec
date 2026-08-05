@@ -1,0 +1,33 @@
+Pod::Spec.new do |spec|
+  spec.name         = "HiveAuthV4ProviderGoogle"
+  spec.version      = "26.6.0-beta12"
+  spec.summary      = "HiveAuthV4ProviderGoogle optional framework"
+  spec.description  = "HiveAuthV4ProviderGoogle to use Google sign-in with Hive SDK."
+  spec.homepage     = "https://developers.hiveplatform.ai/"
+  spec.license      = {
+    :type => 'Apache-2.0',
+    :file => "#{Dir.pwd}/../../LICENSE"
+  }
+  spec.author       = { "Com2usPlatrformCorp" => "pc@com2us.com" }
+  spec.platform     = :ios, "13.0"
+  spec.swift_version = "5.0"
+
+  $framework_name = "ProviderGoogle"
+
+  spec.source       = {
+    :http => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/#{$framework_name}.xcframework.zip",
+    :type => "zip"
+  }
+
+  spec.vendored_frameworks = "#{$framework_name}.xcframework"
+
+  spec.dependency 'GoogleUtilities/AppDelegateSwizzler'
+  spec.dependency 'GoogleUtilities/MethodSwizzler'
+  spec.dependency 'GoogleUtilities/Network'
+  spec.dependency 'GoogleUtilities/NSData+zlib'
+  spec.dependency 'GoogleUtilities/Environment'
+  spec.dependency 'GoogleUtilities/Logger'
+  spec.dependency 'GoogleUtilities/UserDefaults'
+  spec.dependency 'GoogleSignIn', "9.0.0"
+  spec.dependency 'HiveSDK', "#{spec.version}"
+end
