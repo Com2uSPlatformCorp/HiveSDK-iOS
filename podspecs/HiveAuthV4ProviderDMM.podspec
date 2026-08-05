@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "HiveAuthV4ProviderDMM"
-  spec.version      = "26.6.0-beta9"
+  spec.version      = "26.6.0-beta10"
   spec.summary      = "HiveAuthV4ProviderDMM optional framework"
   spec.description  = "HiveAuthV4ProviderDMM to use DMM sign-in with Hive SDK."
   spec.homepage     = "https://developers.hiveplatform.ai/"
