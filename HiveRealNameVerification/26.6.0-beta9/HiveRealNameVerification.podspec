@@ -1,0 +1,33 @@
+Pod::Spec.new do |spec|
+  spec.name         = "HiveRealNameVerification"
+  spec.version      = "26.6.0-beta9"
+  spec.summary      = "HiveRealNameVerification optional framework  "
+  spec.description  = "HiveRealNameVerification to use Real Name Verification service with Hive SDK"
+  spec.homepage     = "https://developers.hiveplatform.ai/"
+  spec.license      = {
+    :type => 'Apache-2.0',
+    :file => "#{Dir.pwd}/../../LICENSE"
+  }
+  spec.author       = { "Com2usPlatrformCorp" => "pc@com2us.com" }
+  spec.platform     = :ios, "13.0"
+  spec.swift_version = "5.0"
+
+  spec.source       = {
+    :http => "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/#{spec.name}.xcframework.zip",
+    :type => "zip"
+  }
+
+  spec.prepare_command = <<-CMD
+    download_bundle() {
+      curl -LO "https://github.com/Com2uSPlatformCorp/HiveSDK-iOS/releases/download/#{spec.version}/$1.bundle.zip"
+      unzip -o $1.bundle.zip
+      rm -rf $1.bundle.zip
+    }
+    download_bundle #{spec.name}Resource
+  CMD
+
+  spec.vendored_frameworks = "#{spec.name}.xcframework"
+  spec.resource = "#{spec.name}Resource.bundle"
+
+  spec.dependency 'HiveSDK', "#{spec.version}"
+end
