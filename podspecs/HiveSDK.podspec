@@ -37,12 +37,14 @@ Pod::Spec.new do |spec|
     download_xcframework HIVEUI
     download_bundle HIVEResource
     download_xcframework HIVEProtocol
+    download_xcframework HiveEventBroadcast
   CMD
 
   spec.vendored_frameworks = "HIVECore.xcframework",
                              "HIVEProtocol.xcframework",
                              "HIVEService.xcframework",
-                             "HIVEUI.xcframework"
+                             "HIVEUI.xcframework",
+                             "HiveEventBroadcast.xcframework"
 
   spec.resources = ["HIVEResource.bundle",
                    "HIVECoreResource.bundle",
